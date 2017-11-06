@@ -6,6 +6,8 @@ var TH = {
     camera : null,
     renderer : null,
     material : null,
+    texloader : null,
+    texture : null,
 
     init : function () {
         TH.threediv = document.getElementById('3d'),
@@ -20,7 +22,12 @@ var TH = {
         TH.renderer.setSize(TH.width, TH.height);
         TH.threediv.appendChild(TH.renderer.domElement);
 
-        TH.material = new THREE.MeshBasicMaterial({color: 0x0000ff, flatShading: true, overdraw: 0.5});
+        TH.texloader = new THREE.TextureLoader();
+        TH.texture = TH.texloader.load('wall3.png');
+        TH.texture.wrapS = THREE.RepeatWrapping;
+        TH.texture.wrapT = THREE.RepeatWrapping;
+        TH.texture.repeat.set(4, 4);
+        TH.material = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: TH.texture});
     },
     run : function(update) {
         requestAnimationFrame( function(){TH.run(update)} );
