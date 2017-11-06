@@ -1,5 +1,5 @@
-function addBox(x, z, width, height, depth) {
-    TH.addBox(x, z, width, height, depth);
+function addWall(x, z, width, height, depth) {
+    TH.addWall(x, z, width, height, depth);
     MA.addBox(x, z, width, depth);
 }
 
@@ -38,7 +38,10 @@ function init() {
     TH.init();
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
     TH.camera.rotation.y = -MA.player.angle + (3 * Math.PI / 2);
-    addBox(100, 100, 50, 50, 50);
+    addWall(100, 100, 50, 50, 50);
+    addWall(100, 500, 50, 50, 50);
+    addWall(500, 100, 50, 50, 50);
+    addWall(500, 500, 50, 50, 50);
 }
 init();
 

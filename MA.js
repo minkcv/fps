@@ -3,7 +3,6 @@ var MA = {
     render : null,
     player : null,
 
-    // create an engine
     init : function() {
         // module aliases
         var Engine = Matter.Engine,
