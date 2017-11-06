@@ -7,10 +7,8 @@ var TH = {
     renderer : null,
     texloader : null,
     textures : {
-        wall1 : null
     },
     materials : {
-        wall1 : null
     },
 
     init : function () {
@@ -27,12 +25,18 @@ var TH = {
         TH.threediv.appendChild(TH.renderer.domElement);
 
         TH.texloader = new THREE.TextureLoader();
-        TH.textures.wall1 = TH.texloader.load('img/wall1.png');
-        TH.textures.wall1.wrapS = THREE.RepeatWrapping;
-        TH.textures.wall1.wrapT = THREE.RepeatWrapping;
-        TH.textures.wall1.repeat.set(1, 1);
-        TH.textures.wall1.magFilter = THREE.NearestFilter;
+        TH.textures.wall1 = TH._loadTexture('wall1.png');
+        TH.textures.wall2 = TH._loadTexture('wall2.png');
         TH.materials.wall1 = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: TH.textures.wall1});
+        TH.materials.wall2 = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: TH.textures.wall2});
+    },
+    _loadTexture : function(name) {
+        var tex = TH.texloader.load('img/' + name);
+        tex.wrapS = THREE.RepeatWrapping;
+        tex.wrapT = THREE.RepeatWrapping;
+        tex.repeat.set(1, 1);
+        tex.magFilter = THREE.NearestFilter;
+        return tex;
     },
     run : function(update) {
         requestAnimationFrame( function(){TH.run(update)} );
@@ -40,8 +44,9 @@ var TH = {
         TH.renderer.render( TH.scene, TH.camera );
     },
     addWall : function(x, z, width, depth, height) {
+        var texIndex = Math.floor(Math.random() * 2) + 1;
         var geometry = new THREE.BoxGeometry(width, height, depth);
-        var box = new THREE.Mesh( geometry, TH.materials.wall1 );
+        var box = new THREE.Mesh( geometry, TH.materials['wall' + texIndex] );
         box.position.set(x, 0, z);
         TH.scene.add(box);
     }
