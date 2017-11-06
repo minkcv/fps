@@ -14,10 +14,11 @@ var MA = {
 
         MA.render = Render.create({
             element: document.getElementById('map'),
-            engine: MA.engine
+            engine: MA.engine,
+            bounds: {min: {x:-400, y:-300}, max: {x:400, y:300}}
         });
 
-        MA.player = Bodies.circle(300, 300, 5);
+        MA.player = Bodies.circle(0, 0, 5);
         MA.player.mass = 150;
         MA.player.frictionAir = 1;
 

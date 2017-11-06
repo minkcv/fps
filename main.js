@@ -38,10 +38,11 @@ function init() {
     TH.init();
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
     TH.camera.rotation.y = -MA.player.angle + (3 * Math.PI / 2);
+    TH.addFloor();
+    addWall(-100, -100, 50, 50, 50);
+    addWall(-100, 100, 50, 50, 50);
+    addWall(100, -100, 50, 50, 50);
     addWall(100, 100, 50, 50, 50);
-    addWall(100, 500, 50, 50, 50);
-    addWall(500, 100, 50, 50, 50);
-    addWall(500, 500, 50, 50, 50);
 }
 init();
 
