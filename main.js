@@ -82,17 +82,27 @@ function init() {
     addWall(100, -100, 50, 50, 50);
     addWall(100, 100, 50, 50, 50);
     var points = {"0":{"x":221,"y":31},"1":{"x":194,"y":62},"2":{"x":212,"y":90},"3":{"x":256,"y":97},"4":{"x":271,"y":66}};
-    var minX = Number.MAX_VALUE;
-    var minY = Number.MAX_VALUE;
-    for (key in points) {
-        var point = points[key];
-        if (point.x < minX)
-            minX = point.x;
-        if (point.y < minY)
-            minY = point.y;
+    var cx = 0;
+    var cy = 0;
+    var x0, x1, y0, y1, a, signedArea = 0;
+    var count = Object.keys(points).length
+    for (var i = 0; i < count; i++) {
+        console.log(i);
+        var point = points[i];
+        x0 = point.x;
+        y0 = point.y;
+        x1 = points[(i + 1) % count].x;
+        y1 = points[(i + 1) % count].y;
+        a = x0*y1 - x1*y0;
+        signedArea += a;
+        cx += (x0 + x1) * a;
+        cy += (y0 + y1) * a;
     }
-    // todo, find the midpoint of the shape?
-    addWallShape(minX, minY, points, 50);
+    signedArea *= 0.5;
+    cx /= (6*signedArea);
+    cy /= (6*signedArea);
+    console.log(cx + " " + cy);
+    addWallShape(cx, cy, points, 50);
 }
 init();
 
