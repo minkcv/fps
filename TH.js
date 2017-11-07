@@ -33,7 +33,7 @@ var TH = {
         TH.materials.wall2 = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: TH.textures.wall2});
     },
     _loadTexture : function(name, repeatN) {
-        var tex = TH.texloader.load('img/' + name);
+        var tex = TH.texloader.load('art/' + name);
         tex.wrapS = THREE.RepeatWrapping;
         tex.wrapT = THREE.RepeatWrapping;
         tex.repeat.set(1, 1);
