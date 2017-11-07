@@ -34,5 +34,9 @@ var MA = {
         boxA.friction = 0;
         boxA.frictionAir = 0;
         Matter.World.add(MA.engine.world, boxA);
+    },
+    addFromPoints : function(x, y, points) {
+        var shape = Matter.Bodies.fromVertices(x, y, points, {isStatic: true});
+        Matter.World.add(MA.engine.world, shape);
     }
 }
