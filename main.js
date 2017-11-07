@@ -9,15 +9,27 @@ function rotatePlayer(angle) {
 }
 
 function moveForward() {
-    var xv = Math.cos(MA.player.angle) ;
-    var yv = Math.sin(MA.player.angle) ;
+    var xv = Math.cos(MA.player.angle);
+    var yv = Math.sin(MA.player.angle);
+    Matter.Body.applyForce(MA.player, MA.player.position, {x: xv, y: yv});
+    TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
+}
+function moveLeft() {
+    var xv = Math.cos(MA.player.angle - Math.PI / 2);
+    var yv = Math.sin(MA.player.angle - Math.PI / 2);
+    Matter.Body.applyForce(MA.player, MA.player.position, {x: xv, y: yv});
+    TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
+}
+function moveRight() {
+    var xv = Math.cos(MA.player.angle + Math.PI / 2);
+    var yv = Math.sin(MA.player.angle + Math.PI / 2);
     Matter.Body.applyForce(MA.player, MA.player.position, {x: xv, y: yv});
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
 }
 
 function moveBackward() {
-    var xv = -Math.cos(MA.player.angle) ;
-    var yv = -Math.sin(MA.player.angle) ;
+    var xv = -Math.cos(MA.player.angle);
+    var yv = -Math.sin(MA.player.angle);
     Matter.Body.applyForce(MA.player, MA.player.position, {x: xv, y: yv});
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
 }
@@ -27,10 +39,16 @@ function update() {
         rotatePlayer(0.03);
     else if (keys.right in keysDown)
         rotatePlayer(-0.03);
-    if (keys.up in keysDown)
+
+    if (keys.w in keysDown)
         moveForward();
-    else if (keys.down in keysDown)
+    else if (keys.s in keysDown)
         moveBackward();
+
+    if (keys.a in keysDown)
+        moveLeft();
+    else if (keys.d in keysDown)
+        moveRight();
 }
 
 function init() {
