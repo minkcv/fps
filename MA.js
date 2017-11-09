@@ -59,8 +59,10 @@ var MA = {
         boxA.frictionAir = 0;
         Matter.World.add(MA.engine.world, boxA);
     },
-    addFromPoints : function(points) {
+    addFromPoints : function(x, y, points) {
         var centroid = MA._findCentroid(points);
+        centroid[0] += x;
+        centroid[1] += y;
         var shape = Matter.Bodies.fromVertices(centroid[0], centroid[1], points, {isStatic: true});
         Matter.World.add(MA.engine.world, shape);
     }

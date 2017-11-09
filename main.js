@@ -3,7 +3,7 @@ function addWall(x, z, width, height, depth) {
     MA.addBox(x, z, width, depth);
 }
 
-function addWallShape(points, height) {
+function addWallShape(x, z, points, height) {
     var point = null;
     var firstPoint = null;
     var currentPoint = null;
@@ -17,11 +17,11 @@ function addWallShape(points, height) {
             continue;
         }
         currentPoint = points[key];
-        TH.addWallPlane(point, currentPoint, 50);
+        TH.addWallPlane({x: point.x + x, y: point.y + z}, {x: currentPoint.x + x, y: currentPoint.y + z}, 50);
         point = currentPoint;
     }
-    TH.addWallPlane(firstPoint, currentPoint, 50);
-    MA.addFromPoints(arrPoints);
+    TH.addWallPlane({x: firstPoint.x + x, y: firstPoint.y + z}, {x: currentPoint.x + x, y: currentPoint.y + z}, 50);
+    MA.addFromPoints(x, z, arrPoints);
 }
 
 function rotatePlayer(angle) {
@@ -82,7 +82,9 @@ function init() {
     addWall(100, -100, 50, 50, 50);
     addWall(100, 100, 50, 50, 50);
     var points = {"0":{"x":221,"y":31},"1":{"x":194,"y":62},"2":{"x":212,"y":90},"3":{"x":256,"y":97},"4":{"x":271,"y":66}};
-    addWallShape(points, 50);
+    addWallShape(0, 0, points, 50);
+    var shape2 = {"0":{"x":4,"y":54},"1":{"x":51,"y":4},"2":{"x":121,"y":6},"3":{"x":120,"y":56}};
+    addWallShape(100, 100, shape2, 50);
 }
 init();
 
