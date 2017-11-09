@@ -3,7 +3,7 @@ function addWall(x, z, width, height, depth) {
     MA.addBox(x, z, width, depth);
 }
 
-function addWallShape(x, z, points, height) {
+function addWallShape(points, height) {
     var point = null;
     var firstPoint = null;
     var currentPoint = null;
@@ -21,7 +21,7 @@ function addWallShape(x, z, points, height) {
         point = currentPoint;
     }
     TH.addWallPlane(firstPoint, currentPoint, 50);
-    MA.addFromPoints(x, z, arrPoints);
+    MA.addFromPoints(arrPoints);
 }
 
 function rotatePlayer(angle) {
@@ -82,27 +82,7 @@ function init() {
     addWall(100, -100, 50, 50, 50);
     addWall(100, 100, 50, 50, 50);
     var points = {"0":{"x":221,"y":31},"1":{"x":194,"y":62},"2":{"x":212,"y":90},"3":{"x":256,"y":97},"4":{"x":271,"y":66}};
-    var cx = 0;
-    var cy = 0;
-    var x0, x1, y0, y1, a, signedArea = 0;
-    var count = Object.keys(points).length
-    for (var i = 0; i < count; i++) {
-        console.log(i);
-        var point = points[i];
-        x0 = point.x;
-        y0 = point.y;
-        x1 = points[(i + 1) % count].x;
-        y1 = points[(i + 1) % count].y;
-        a = x0*y1 - x1*y0;
-        signedArea += a;
-        cx += (x0 + x1) * a;
-        cy += (y0 + y1) * a;
-    }
-    signedArea *= 0.5;
-    cx /= (6*signedArea);
-    cy /= (6*signedArea);
-    console.log(cx + " " + cy);
-    addWallShape(cx, cy, points, 50);
+    addWallShape(points, 50);
 }
 init();
 
