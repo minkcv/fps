@@ -6,8 +6,7 @@ var TH = {
     camera : null,
     renderer : null,
     texloader : null,
-    textures : {
-    },
+    floorY : -25,
     materials : {
     },
 
@@ -25,12 +24,13 @@ var TH = {
         TH.threediv.appendChild(TH.renderer.domElement);
 
         TH.texloader = new THREE.TextureLoader();
-        TH.textures.floor = TH._loadTexture('floor.png', 4);
-        TH.materials.floor = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: TH.textures.floor});
-        TH.textures.wall1 = TH._loadTexture('wall1.png');
-        TH.textures.wall2 = TH._loadTexture('wall2.png');
-        TH.materials.wall1 = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: TH.textures.wall1, side: THREE.DoubleSide});
-        TH.materials.wall2 = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: TH.textures.wall2, side: THREE.DoubleSide});
+        TH.materials.floor = TH._loadTextureMaterial('floor.png', 0.008);
+        TH.materials.wall1 = TH._loadTextureMaterial('wall1.png');
+        TH.materials.wall2 = TH._loadTextureMaterial('wall2.png');
+    },
+    _loadTextureMaterial : function(name, repeatN) {
+        var texture = TH._loadTexture(name, repeatN);
+        return new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: texture, side: THREE.DoubleSide});
     },
     _loadTexture : function(name, repeatN) {
         var tex = TH.texloader.load('art/' + name);
@@ -74,6 +74,19 @@ var TH = {
         var floor = new THREE.Mesh( geometry, TH.materials.floor );
         floor.position.set(0, -25, 0);
         floor.rotation.x = -Math.PI / 2;
+        TH.scene.add(floor);
+    },
+    addFloorFromPoints : function(x, z, points) {
+        var thPoints = [];
+        for (var index in points) {
+            var point = points[index];
+            thPoints.push(new THREE.Vector2(point.x + x, point.y + z));
+        }
+        var shape = new THREE.Shape(thPoints);
+        var geometry = new THREE.ShapeGeometry(shape);
+        var floor = new THREE.Mesh(geometry, TH.materials.floor );
+        floor.position.y = TH.floorY;
+        floor.rotation.x = Math.PI / 2;
         TH.scene.add(floor);
     }
 }
