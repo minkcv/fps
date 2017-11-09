@@ -47,11 +47,11 @@ var TH = {
         update();
         TH.renderer.render( TH.scene, TH.camera );
     },
-    addWall : function(x, z, width, depth, height) {
+    addWall : function(x, z, width, height, depth) {
         var texIndex = Math.floor(Math.random() * 2) + 1;
         var geometry = new THREE.BoxGeometry(width, height, depth);
         var box = new THREE.Mesh( geometry, TH.materials['wall' + texIndex] );
-        box.position.set(x, 0, z);
+        box.position.set(x, TH.floorY + height / 2, z);
         TH.scene.add(box);
     },
     distance: function(p1, p2) {
@@ -72,7 +72,7 @@ var TH = {
     addFloor : function () {
         var geometry = new THREE.PlaneGeometry(250, 250);
         var floor = new THREE.Mesh( geometry, TH.materials.floor );
-        floor.position.set(0, -25, 0);
+        floor.position.set(0, TH.floorY, 0);
         floor.rotation.x = -Math.PI / 2;
         TH.scene.add(floor);
     },

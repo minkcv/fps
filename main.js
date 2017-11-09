@@ -79,7 +79,7 @@ function init() {
     TH.camera.rotation.y = -MA.player.angle + (3 * Math.PI / 2);
     addWall(-100, 100, 50, 50, 50);
     addWall(100, -100, 50, 50, 50);
-    addWall(100, 100, 50, 50, 50);
+    addWall(100, 100, 50, 150, 50);
     var points = {"0":{"x":221,"y":31},"1":{"x":194,"y":62},"2":{"x":212,"y":90},"3":{"x":256,"y":97},"4":{"x":271,"y":66}};
     addWallShape(0, 0, points, 50);
     var shape2 = {"0":{"x":4,"y":54},"1":{"x":51,"y":4},"2":{"x":121,"y":6},"3":{"x":120,"y":56}};
