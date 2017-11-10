@@ -24,21 +24,19 @@ var TH = {
         TH.threediv.appendChild(TH.renderer.domElement);
 
         TH.texloader = new THREE.TextureLoader();
-        TH.materials.floor = TH._loadTextureMaterial('floor.png', 0.008);
-        TH.materials.wall1 = TH._loadTextureMaterial('cave_wall1.png');
-        TH.materials.wall2 = TH._loadTextureMaterial('cave_wall2.png');
+        TH.materials.floor = TH._loadTextureMaterial('floor.png', 0.008, 0.008);
+        TH.materials.wall1 = TH._loadTextureMaterial('cave_wall1.png', 1, 1);
+        TH.materials.wall2 = TH._loadTextureMaterial('cave_wall2.png', 1, 1);
     },
-    _loadTextureMaterial : function(name, repeatN) {
-        var texture = TH._loadTexture(name, repeatN);
+    _loadTextureMaterial : function(name, repeatX, repeatY) {
+        var texture = TH._loadTexture(name, repeatX, repeatY);
         return new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: texture, side: THREE.DoubleSide});
     },
-    _loadTexture : function(name, repeatN) {
+    _loadTexture : function(name, repeatX, repeatY) {
         var tex = TH.texloader.load('art/' + name);
         tex.wrapS = THREE.RepeatWrapping;
         tex.wrapT = THREE.RepeatWrapping;
-        tex.repeat.set(1, 1);
-        if (repeatN)
-            tex.repeat.set(repeatN, repeatN);
+        tex.repeat.set(repeatX, repeatY);
         tex.magFilter = THREE.NearestFilter;
         return tex;
     },
