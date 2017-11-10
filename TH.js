@@ -25,8 +25,8 @@ var TH = {
 
         TH.texloader = new THREE.TextureLoader();
         TH.materials.floor = TH._loadTextureMaterial('floor.png', 0.008);
-        TH.materials.wall1 = TH._loadTextureMaterial('wall1.png');
-        TH.materials.wall2 = TH._loadTextureMaterial('wall2.png');
+        TH.materials.wall1 = TH._loadTextureMaterial('cave_wall1.png');
+        TH.materials.wall2 = TH._loadTextureMaterial('cave_wall2.png');
     },
     _loadTextureMaterial : function(name, repeatN) {
         var texture = TH._loadTexture(name, repeatN);
