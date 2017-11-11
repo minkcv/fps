@@ -102,7 +102,7 @@ function init() {
     addWallShape(-1100, -765, maze2, 50);
     TH.addFloor(0, TH.floorY, 0, 3500, 2500, 'floor.png');
     TH.addFloor(0, -TH.floorY, 0, 3500, 2500, 'ceiling.png');
-    addSprite(-20, -20, 5);
+    addSprite(-20, -190, 5);
 }
 init();
 
