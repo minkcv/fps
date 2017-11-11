@@ -3,6 +3,11 @@ function addWall(x, z, width, height, depth) {
     MA.addBox(x, z, width, depth);
 }
 
+function addSprite(x, z) {
+    TH.addSprite(x, z);
+    MA.addCircle(x, z, 10);
+}
+
 // points must be packed to +x and +y axes (no padding between shape and origin corner of the canvas)
 function addWallShape(x, z, points, height) {
     var prevPoint = null;
@@ -97,6 +102,7 @@ function init() {
     addWallShape(-1100, -765, maze2, 50);
     TH.addFloor(0, TH.floorY, 0, 3500, 2500, 'floor.png');
     TH.addFloor(0, -TH.floorY, 0, 3500, 2500, 'ceiling.png');
+    addSprite(-20, -20, 5);
 }
 init();
 

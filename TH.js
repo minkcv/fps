@@ -30,6 +30,10 @@ var TH = {
         var texture = TH._loadTexture(name, repeatX, repeatY);
         return new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: texture, side: THREE.DoubleSide});
     },
+    _loadSpriteMaterial : function(name, repeatX, repeatY) {
+        var tex = TH._loadTexture(name, repeatX, repeatY);
+        return new THREE.SpriteMaterial({map: tex, color: 0xffffff});
+    },
     _loadTexture : function(name, repeatX, repeatY) {
         var tex = TH.texloader.load('art/' + name);
         tex.wrapS = THREE.RepeatWrapping;
@@ -51,10 +55,21 @@ var TH = {
         box.position.set(x, TH.floorY + height / 2, z);
         TH.scene.add(box);
     },
-    distance: function(p1, p2) {
+    distance : function(p1, p2) {
         var dx = Math.abs(p1.x - p2.x);
         var dy = Math.abs(p1.y - p2.y);
         return Math.sqrt(dx * dx + dy * dy);
+    },
+    addSprite : function(x, z) {
+        var mat = TH._loadSpriteMaterial('sprite1.png', 1, 1);
+        var sprite = new THREE.Sprite(mat);
+        sprite.position.x = x;
+        sprite.position.z = z;
+        sprite.position.y = -5;
+        sprite.scale.x = 25;
+        sprite.scale.y = 50;
+        sprite.scale.z = 50;
+        TH.scene.add(sprite);
     },
     addWallPlane : function(p1, p2, height) {
         var length = TH.distance(p1, p2);

@@ -42,6 +42,10 @@ var MA = {
         MA.render.bounds.min.y = y - MA.renderHeight / 2;
         MA.render.bounds.max.y = y + MA.renderHeight / 2;
     },
+    addCircle : function(x, z, radius) {
+        var circle = Matter.Bodies.circle(x, z, radius, {isStatic: true});
+        Matter.World.add(MA.engine.world, circle);
+    },
     addBox : function(x, y, width, depth) {
         var boxA = Matter.Bodies.rectangle(x, y, width, depth, {isStatic: true});
         boxA.friction = 0;
