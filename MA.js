@@ -1,4 +1,6 @@
 var MA = {
+    renderWidth : 800,
+    renderHeight: 600,
     engine : null,
     render : null,
     player : null,
@@ -31,6 +33,14 @@ var MA = {
     run : function() {
         Matter.Engine.run(MA.engine);
         Matter.Render.run(MA.render);
+    },
+    updateView : function() {
+        var x = MA.player.position.x;
+        var y = MA.player.position.y;
+        MA.render.bounds.min.x = x - MA.renderWidth / 2;
+        MA.render.bounds.max.x = x + MA.renderWidth / 2;
+        MA.render.bounds.min.y = y - MA.renderHeight / 2;
+        MA.render.bounds.max.y = y + MA.renderHeight / 2;
     },
     addBox : function(x, y, width, depth) {
         var boxA = Matter.Bodies.rectangle(x, y, width, depth, {isStatic: true});
