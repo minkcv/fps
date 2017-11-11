@@ -16,98 +16,98 @@
      "tiles": [
       {
        "bg": 1,
-       "char": 88,
-       "fg": 7,
+       "char": 156,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 157,
-       "fg": 7,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
-       "char": 88,
-       "fg": 7,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 157,
-       "fg": 7,
+       "char": 156,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 157,
-       "fg": 7,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 88,
-       "fg": 7,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 157,
-       "fg": 7,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
-       "char": 88,
-       "fg": 7,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 88,
-       "fg": 7,
+       "char": 156,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 157,
-       "fg": 7,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
-       "char": 88,
-       "fg": 7,
+       "char": 156,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
-       "char": 157,
-       "fg": 7,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 157,
-       "fg": 7,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 88,
-       "fg": 7,
+       "char": 156,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 157,
-       "fg": 7,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
-       "char": 88,
-       "fg": 7,
+       "char": 156,
+       "fg": 2,
+       "xform": 0
+      },
+      {
+       "bg": 1,
+       "char": 157,
+       "fg": 2,
+       "xform": 0
+      },
+      {
+       "bg": 1,
+       "char": 157,
+       "fg": 2,
+       "xform": 0
+      },
+      {
+       "bg": 1,
+       "char": 156,
+       "fg": 2,
+       "xform": 0
+      },
+      {
+       "bg": 1,
+       "char": 157,
+       "fg": 2,
+       "xform": 0
+      },
+      {
+       "bg": 1,
+       "char": 156,
+       "fg": 2,
        "xform": 0
       }
      ],
@@ -120,8 +120,8 @@
  "height": 4,
  "palette": "c64_original",
  "selected_bg_color": 1,
- "selected_char": 157,
- "selected_fg_color": 7,
+ "selected_char": 156,
+ "selected_fg_color": 2,
  "selected_xform": 0,
  "width": 4
 }

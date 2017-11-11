@@ -16,25 +16,25 @@
      "tiles": [
       {
        "bg": 1,
-       "char": 34,
+       "char": 0,
        "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
-       "char": 114,
+       "char": 0,
        "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
-       "char": 34,
+       "char": 0,
        "fg": 2,
        "xform": 0
       },
       {
        "bg": 1,
-       "char": 39,
+       "char": 0,
        "fg": 2,
        "xform": 0
       },
@@ -58,7 +58,19 @@
       },
       {
        "bg": 1,
+       "char": 126,
+       "fg": 2,
+       "xform": 0
+      },
+      {
+       "bg": 1,
        "char": 0,
+       "fg": 2,
+       "xform": 0
+      },
+      {
+       "bg": 1,
+       "char": 75,
        "fg": 2,
        "xform": 0
       },
@@ -94,19 +106,7 @@
       },
       {
        "bg": 1,
-       "char": 103,
-       "fg": 2,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 124,
-       "fg": 2,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 103,
+       "char": 0,
        "fg": 2,
        "xform": 0
       }
@@ -120,7 +120,7 @@
  "height": 4,
  "palette": "c64_original",
  "selected_bg_color": 1,
- "selected_char": 39,
+ "selected_char": 46,
  "selected_fg_color": 2,
  "selected_xform": 0,
  "width": 4

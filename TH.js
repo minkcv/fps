@@ -6,7 +6,7 @@ var TH = {
     camera : null,
     renderer : null,
     texloader : null,
-    floorY : -25,
+    floorY : -30,
     materials : {
     },
 
@@ -15,6 +15,7 @@ var TH = {
         TH.width = TH.threediv.clientWidth;
         TH.height = TH.threediv.clientHeight;
         TH.scene = new THREE.Scene();
+        TH.scene.background = new THREE.Color(0x0c1013);
         TH.camera = new THREE.PerspectiveCamera(45, TH.width / TH.height, 0.1, 1000);
         TH.scene.add(TH.camera);
         TH.camera.rotateY(-3.14 / 2);
@@ -24,7 +25,7 @@ var TH = {
         TH.threediv.appendChild(TH.renderer.domElement);
 
         TH.texloader = new THREE.TextureLoader();
-        TH.materials.floor = TH._loadTextureMaterial('floor.png', 0.008, 0.008);
+        //TH.materials.floor = TH._loadTextureMaterial('floor.png', 0.008, 0.008);
         TH.materials.wall1 = TH._loadTextureMaterial('cave_wall1.png', 1, 1);
         TH.materials.wall2 = TH._loadTextureMaterial('cave_wall2.png', 1, 1);
     },
@@ -38,6 +39,7 @@ var TH = {
         tex.wrapT = THREE.RepeatWrapping;
         tex.repeat.set(repeatX, repeatY);
         tex.magFilter = THREE.NearestFilter;
+        tex.minFilter = THREE.NearestFilter;
         return tex;
     },
     run : function(update) {
@@ -58,8 +60,11 @@ var TH = {
         return Math.sqrt(dx * dx + dy * dy);
     },
     addWallPlane : function(p1, p2, height) {
-        var geometry = new THREE.PlaneGeometry(TH.distance(p1, p2), height)
-        var plane = new THREE.Mesh(geometry, TH.materials.wall2);
+        var length = TH.distance(p1, p2);
+        var geometry = new THREE.PlaneGeometry(length, height);
+        var repeat = Math.floor(length / height);
+        var mat = TH._loadTextureMaterial('cave_wall1.png', repeat || 1, 1);
+        var plane = new THREE.Mesh(geometry, mat);
         var midpoint = {x: p1.x + (p2.x - p1.x) / 2, y: p1.y + (p2.y - p1.y) / 2};
         plane.position.x = midpoint.x;
         plane.position.z = midpoint.y;
@@ -67,10 +72,13 @@ var TH = {
         plane.rotateY(angle);
         TH.scene.add(plane);
     },
-    addFloor : function () {
-        var geometry = new THREE.PlaneGeometry(250, 250);
+    addFloor : function (x, y, z, width, depth, image) {
+        var repeatX = Math.floor(width / 100);
+        var repeatY = Math.floor(depth / 100);
+        TH.materials.floor = TH._loadTextureMaterial(image, repeatX || 1, repeatY || 1);
+        var geometry = new THREE.PlaneGeometry(width, depth);
         var floor = new THREE.Mesh( geometry, TH.materials.floor );
-        floor.position.set(0, TH.floorY, 0);
+        floor.position.set(x, y, z);
         floor.rotation.x = -Math.PI / 2;
         TH.scene.add(floor);
     },
