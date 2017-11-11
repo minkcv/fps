@@ -15,7 +15,7 @@ var TH = {
         TH.width = TH.threediv.clientWidth;
         TH.height = TH.threediv.clientHeight;
         TH.scene = new THREE.Scene();
-        TH.scene.background = new THREE.Color(0x0c1013);
+        //TH.scene.background = new THREE.Color(0x0c1013);
         TH.camera = new THREE.PerspectiveCamera(45, TH.width / TH.height, 0.1, 1000);
         TH.scene.add(TH.camera);
         TH.camera.rotateY(-3.14 / 2);
@@ -25,9 +25,6 @@ var TH = {
         TH.threediv.appendChild(TH.renderer.domElement);
 
         TH.texloader = new THREE.TextureLoader();
-        //TH.materials.floor = TH._loadTextureMaterial('floor.png', 0.008, 0.008);
-        TH.materials.wall1 = TH._loadTextureMaterial('cave_wall1.png', 1, 1);
-        TH.materials.wall2 = TH._loadTextureMaterial('cave_wall2.png', 1, 1);
     },
     _loadTextureMaterial : function(name, repeatX, repeatY) {
         var texture = TH._loadTexture(name, repeatX, repeatY);
@@ -63,7 +60,8 @@ var TH = {
         var length = TH.distance(p1, p2);
         var geometry = new THREE.PlaneGeometry(length, height);
         var repeat = Math.floor(length / height);
-        var mat = TH._loadTextureMaterial('cave_wall1.png', repeat || 1, 1);
+        var wallNumber = Math.floor(Math.random() * 2) + 1;
+        var mat = TH._loadTextureMaterial('cave_wall' + wallNumber + '.png', repeat || 1, 1);
         var plane = new THREE.Mesh(geometry, mat);
         var midpoint = {x: p1.x + (p2.x - p1.x) / 2, y: p1.y + (p2.y - p1.y) / 2};
         plane.position.x = midpoint.x;
