@@ -26,7 +26,7 @@ var MA = {
         MA.player = Bodies.circle(0, 0, 5);
         MA.player.mass = 150;
         MA.player.frictionAir = 1;
-        Matter.Body.rotate(MA.player, -Math.PI / 2);
+        Matter.Body.rotate(MA.player, Math.PI / 2);
 
         World.add(MA.engine.world, MA.player);
         MA.engine.world.gravity.y = 0;
@@ -34,6 +34,9 @@ var MA = {
     run : function() {
         Matter.Engine.run(MA.engine);
         Matter.Render.run(MA.render);
+    },
+    movePlayer : function(x, y) {
+        Matter.Body.translate(MA.player, {x: x, y: y});
     },
     updateView : function() {
         var x = MA.player.position.x;

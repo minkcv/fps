@@ -8,7 +8,6 @@ var TH = {
     texloader : null,
     floorY : -30,
     clock : null,
-    materials : {},
     animators : [],
 
     init : function () {
@@ -77,7 +76,7 @@ var TH = {
         sprite.scale.z = 50;
         TH.scene.add(sprite);
     },
-    addWallPlane : function(p1, p2, height) {
+    addWallPlane : function(p1, p2, height, cliff) {
         var length = TH.distance(p1, p2);
         var geometry = new THREE.PlaneGeometry(length, height);
         var repeat = Math.floor(length / height);
@@ -89,14 +88,16 @@ var TH = {
         plane.position.z = midpoint.y;
         var angle = -Math.atan((p2.y - p1.y) / (p2.x - p1.x));
         plane.rotateY(angle);
+        if (cliff)
+            plane.position.y = 2 * TH.floorY;
         TH.scene.add(plane);
     },
     addFloor : function (x, y, z, width, depth, image) {
         var repeatX = Math.floor(width / 100);
         var repeatY = Math.floor(depth / 100);
-        TH.materials.floor = TH._loadTextureMaterial(image, repeatX || 1, repeatY || 1);
+        var mat = TH._loadTextureMaterial(image, repeatX || 1, repeatY || 1);
         var geometry = new THREE.PlaneGeometry(width, depth);
-        var floor = new THREE.Mesh( geometry, TH.materials.floor );
+        var floor = new THREE.Mesh( geometry, mat);
         floor.position.set(x, y, z);
         floor.rotation.x = -Math.PI / 2;
         TH.scene.add(floor);
@@ -109,7 +110,8 @@ var TH = {
         }
         var shape = new THREE.Shape(thPoints);
         var geometry = new THREE.ShapeGeometry(shape);
-        var floor = new THREE.Mesh(geometry, TH.materials.floor );
+        var mat = TH._loadTextureMaterial('floor.png', 0.008, 0.008);
+        var floor = new THREE.Mesh(geometry, mat);
         floor.position.y = TH.floorY;
         floor.rotation.x = Math.PI / 2;
         TH.scene.add(floor);
