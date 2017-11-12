@@ -104,6 +104,7 @@ function init() {
     TH.addFloor(0, TH.floorY, 0, 3500, 2500, 'floor.png');
     TH.addFloor(0, -TH.floorY, 0, 3500, 2500, 'ceiling.png');
     addSprite(-20, -190, 5);
+    addSprite(50, -190, 5);
 }
 init();
 

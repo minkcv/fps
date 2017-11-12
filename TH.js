@@ -63,8 +63,8 @@ var TH = {
         return Math.sqrt(dx * dx + dy * dy);
     },
     addSprite : function(x, z) {
-        var tex = TH._loadTexture('sprite1.png', 1, 1);
-        var animator = new TextureAnimator(tex, 2, 1, 2, 500);
+        var tex = TH._loadTexture('torch.png', 1, 1);
+        var animator = new TextureAnimator(tex, 4, 1, 4, 200);
         TH.animators.push(animator);
         var mat = new THREE.SpriteMaterial({map: tex, color: 0xffffff});
         //var mat = TH._loadSpriteMaterial('sprite1.png', 1, 1);
