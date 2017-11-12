@@ -26,7 +26,6 @@ var MA = {
         MA.player = Bodies.circle(0, 0, 5);
         MA.player.mass = 150;
         MA.player.frictionAir = 1;
-        Matter.Body.rotate(MA.player, Math.PI / 2);
 
         World.add(MA.engine.world, MA.player);
         MA.engine.world.gravity.y = 0;

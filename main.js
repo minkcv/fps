@@ -42,47 +42,51 @@ function rotatePlayer(angle) {
     TH.camera.rotation.y = -MA.player.angle + (3 * Math.PI / 2);
 }
 
-function moveForward() {
-    var xv = Math.cos(MA.player.angle);
-    var yv = Math.sin(MA.player.angle);
+function moveForward(moveSpeed) {
+    var xv = Math.cos(MA.player.angle) * moveSpeed;
+    var yv = Math.sin(MA.player.angle) * moveSpeed;
     Matter.Body.applyForce(MA.player, MA.player.position, {x: xv, y: yv});
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
 }
-function moveLeft() {
-    var xv = Math.cos(MA.player.angle - Math.PI / 2);
-    var yv = Math.sin(MA.player.angle - Math.PI / 2);
+function moveLeft(moveSpeed) {
+    var xv = Math.cos(MA.player.angle - Math.PI / 2) * moveSpeed;
+    var yv = Math.sin(MA.player.angle - Math.PI / 2) * moveSpeed;
     Matter.Body.applyForce(MA.player, MA.player.position, {x: xv, y: yv});
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
 }
-function moveRight() {
-    var xv = Math.cos(MA.player.angle + Math.PI / 2);
-    var yv = Math.sin(MA.player.angle + Math.PI / 2);
+function moveRight(moveSpeed) {
+    var xv = Math.cos(MA.player.angle + Math.PI / 2) * moveSpeed;
+    var yv = Math.sin(MA.player.angle + Math.PI / 2) * moveSpeed;
     Matter.Body.applyForce(MA.player, MA.player.position, {x: xv, y: yv});
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
 }
 
-function moveBackward() {
-    var xv = -Math.cos(MA.player.angle);
-    var yv = -Math.sin(MA.player.angle);
+function moveBackward(moveSpeed) {
+    var xv = -Math.cos(MA.player.angle) * moveSpeed;
+    var yv = -Math.sin(MA.player.angle) * moveSpeed;
     Matter.Body.applyForce(MA.player, MA.player.position, {x: xv, y: yv});
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
 }
 
 function update() {
+    var moveSpeed = 1;
+    if (keys.shift in keysDown)
+        moveSpeed = 2;
+
     if (keys.left in keysDown)
         rotatePlayer(0.03);
     else if (keys.right in keysDown)
         rotatePlayer(-0.03);
 
     if (keys.w in keysDown)
-        moveForward();
+        moveForward(moveSpeed);
     else if (keys.s in keysDown)
-        moveBackward();
+        moveBackward(moveSpeed);
 
     if (keys.a in keysDown)
-        moveLeft();
+        moveLeft(moveSpeed);
     else if (keys.d in keysDown)
-        moveRight();
+        moveRight(moveSpeed);
 
     MA.updateView();
     TH.update();
@@ -91,7 +95,8 @@ function update() {
 function init() {
     MA.init();
     TH.init();
-    MA.movePlayer(-1540, -995);
+    //MA.movePlayer(-1540, -995);
+    rotatePlayer(Math.PI / 2);
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
     TH.camera.rotation.y = -MA.player.angle + (3 * Math.PI / 2);
     //addWall(-100, 100, 50, 50, 50);
