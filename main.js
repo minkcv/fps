@@ -81,6 +81,7 @@ function update() {
         moveRight();
 
     MA.updateView();
+    TH.update();
 }
 
 function init() {

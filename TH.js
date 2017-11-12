@@ -7,8 +7,9 @@ var TH = {
     renderer : null,
     texloader : null,
     floorY : -30,
-    materials : {
-    },
+    clock : null,
+    materials : {},
+    animators : [],
 
     init : function () {
         TH.threediv = document.getElementById('3d'),
@@ -25,6 +26,7 @@ var TH = {
         TH.threediv.appendChild(TH.renderer.domElement);
 
         TH.texloader = new THREE.TextureLoader();
+        TH.clock = new THREE.Clock();
     },
     _loadTextureMaterial : function(name, repeatX, repeatY) {
         var texture = TH._loadTexture(name, repeatX, repeatY);
@@ -61,7 +63,11 @@ var TH = {
         return Math.sqrt(dx * dx + dy * dy);
     },
     addSprite : function(x, z) {
-        var mat = TH._loadSpriteMaterial('sprite1.png', 1, 1);
+        var tex = TH._loadTexture('sprite1.png', 1, 1);
+        var animator = new TextureAnimator(tex, 2, 1, 2, 500);
+        TH.animators.push(animator);
+        var mat = new THREE.SpriteMaterial({map: tex, color: 0xffffff});
+        //var mat = TH._loadSpriteMaterial('sprite1.png', 1, 1);
         var sprite = new THREE.Sprite(mat);
         sprite.position.x = x;
         sprite.position.z = z;
@@ -107,6 +113,12 @@ var TH = {
         floor.position.y = TH.floorY;
         floor.rotation.x = Math.PI / 2;
         TH.scene.add(floor);
+    },
+    update : function() {
+        var delta = TH.clock.getDelta(); 
+        for (var i in TH.animators) {
+            TH.animators[i].update(delta * 1000);
+        }
     }
 }
 

@@ -2,7 +2,7 @@
  "active_frame": 0,
  "active_layer": 0,
  "camera": [
-  1.0,
+  2.0,
   -2.0,
   2.8125
  ],
@@ -28,6 +28,18 @@
       },
       {
        "bg": 0,
+       "char": 0,
+       "fg": 3,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 0,
+       "fg": 3,
+       "xform": 0
+      },
+      {
+       "bg": 0,
        "char": 32,
        "fg": 3,
        "xform": 0
@@ -35,6 +47,18 @@
       {
        "bg": 0,
        "char": 44,
+       "fg": 3,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 32,
+       "fg": 3,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 0,
        "fg": 3,
        "xform": 0
       },
@@ -52,6 +76,18 @@
       },
       {
        "bg": 0,
+       "char": 39,
+       "fg": 3,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 11,
+       "fg": 3,
+       "xform": 0
+      },
+      {
+       "bg": 0,
        "char": 47,
        "fg": 3,
        "xform": 0
@@ -59,6 +95,18 @@
       {
        "bg": 0,
        "char": 28,
+       "fg": 3,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 0,
+       "fg": 3,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 85,
        "fg": 3,
        "xform": 0
       }
@@ -75,5 +123,5 @@
  "selected_char": 0,
  "selected_fg_color": 3,
  "selected_xform": 0,
- "width": 2
+ "width": 4
 }
