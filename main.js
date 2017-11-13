@@ -14,7 +14,7 @@ function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, t
     MA.addCircle(x, z, 10);
 }
 function addTorch (x, z) { addSprite(x, -8, z, 1, 2, 1, 'torch.png', 4, 1, 4, 200)}
-function addSlug (x, z) { addSprite(x, -25, z, 4, 1, 0.4, 'slug.png')}
+function addSlug (x, z) { addSprite(x, -25, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 200)}
 function addLadder (x, z) { addSprite(x, 0, z, 2, 4, 0.6, 'ladder.png')}
 
 function addWallShape(x, z, points, close, cliff) {
@@ -114,7 +114,7 @@ function loadLevel1() {
     TH.addFloor(0, -TH.floorY, 0, 3500, 2500, 'ceiling.png');
     addTorch(360, 300);
     addTorch(460, 300);
-    addSlug(400, 100);
+    addSlug(800, 370);
     addLadder(680, 270);
 }
 
