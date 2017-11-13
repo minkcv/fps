@@ -56,17 +56,11 @@ var TH = {
         box.position.set(x, TH.floorY + height / 2, z);
         TH.scene.add(box);
     },
-    distance : function(p1, p2) {
-        var dx = Math.abs(p1.x - p2.x);
-        var dy = Math.abs(p1.y - p2.y);
-        return Math.sqrt(dx * dx + dy * dy);
-    },
     addSprite : function(x, z) {
         var tex = TH._loadTexture('torch.png', 1, 1);
         var animator = new TextureAnimator(tex, 4, 1, 4, 200);
         TH.animators.push(animator);
         var mat = new THREE.SpriteMaterial({map: tex, color: 0xffffff});
-        //var mat = TH._loadSpriteMaterial('sprite1.png', 1, 1);
         var sprite = new THREE.Sprite(mat);
         sprite.position.x = x;
         sprite.position.z = z;
@@ -77,7 +71,7 @@ var TH = {
         TH.scene.add(sprite);
     },
     addWallPlane : function(p1, p2, height, cliff) {
-        var length = TH.distance(p1, p2);
+        var length = distance(p1, p2);
         var geometry = new THREE.PlaneGeometry(length, height);
         var repeat = Math.floor(length / height);
         var wallNumber = Math.floor(Math.random() * 2) + 1;

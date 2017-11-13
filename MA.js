@@ -60,11 +60,23 @@ var MA = {
         boxA.frictionAir = 0;
         Matter.World.add(MA.engine.world, boxA);
     },
+    addWall : function(p1, p2) {
+        var length = distance(p1, p2);
+        var x = (p2.x + p1.x) / 2;
+        var y = (p2.y + p1.y) / 2;
+        // horizontal until rotated
+        var rect = Matter.Bodies.rectangle(x, y, length, 2, {isStatic: true, chamfer: {radius:1}});
+        var angle = -Math.atan((p1.y - p2.y) / (p2.x - p1.x));
+        Matter.Body.rotate(rect, angle);
+        Matter.World.add(MA.engine.world, rect);
+    },
+    /* old concave polygon body
     addFromPoints : function(x, y, points) {
         var shape = Matter.Bodies.fromVertices(x, y, points, {isStatic: true});
         Matter.World.add(MA.engine.world, shape);
         return {x: shape.bounds.min.x, y: shape.bounds.min.y}
     },
+    */
     clearWorld : function() {
         Matter.World.clear(MA.engine.world);
     }
