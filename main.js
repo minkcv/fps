@@ -38,7 +38,7 @@ function addWallShape(x, z, points, cliff) {
 }
 
 function rotatePlayer(angle) {
-    Matter.Body.rotate(MA.player, -angle);
+    MA.rotatePlayer(-angle);
     TH.camera.rotation.y = -MA.player.angle + (3 * Math.PI / 2);
 }
 
@@ -92,10 +92,9 @@ function update() {
     TH.update();
 }
 
-function init() {
-    MA.init();
-    TH.init();
+function loadLevel1() {
     //MA.movePlayer(-1540, -995);
+    MA.createPlayer(0, 0, Math.PI / 2);
     rotatePlayer(Math.PI / 2);
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);
     TH.camera.rotation.y = -MA.player.angle + (3 * Math.PI / 2);
@@ -111,6 +110,15 @@ function init() {
     TH.addFloor(0, -TH.floorY, 0, 3500, 2500, 'ceiling.png');
     addSprite(-20, -190, 5);
     addSprite(50, -190, 5);
+}
+
+function init() {
+    MA.init();
+    TH.init();
+    loadLevel1();
+    TH.clearScene();
+    MA.clearWorld();
+    loadLevel1();
 }
 init();
 

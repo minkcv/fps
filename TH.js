@@ -121,6 +121,11 @@ var TH = {
         for (var i in TH.animators) {
             TH.animators[i].update(delta * 1000);
         }
+    },
+    clearScene : function() {
+        // TODO: cleanup materials?
+        while (TH.scene.children.length)
+            TH.scene.remove(TH.scene.children[0]);
     }
 }
 

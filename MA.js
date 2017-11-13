@@ -23,12 +23,17 @@ var MA = {
             }
         });
 
-        MA.player = Bodies.circle(0, 0, 5);
+        MA.engine.world.gravity.y = 0;
+    },
+    createPlayer : function(x, y, angle) {
+        MA.player = Matter.Bodies.circle(x, y, 5);
         MA.player.mass = 150;
         MA.player.frictionAir = 1;
-
-        World.add(MA.engine.world, MA.player);
-        MA.engine.world.gravity.y = 0;
+        MA.rotatePlayer(angle);
+        Matter.World.add(MA.engine.world, MA.player);
+    },
+    rotatePlayer : function(angle) {
+        Matter.Body.rotate(MA.player, angle);
     },
     run : function() {
         Matter.Engine.run(MA.engine);
@@ -59,5 +64,8 @@ var MA = {
         var shape = Matter.Bodies.fromVertices(x, y, points, {isStatic: true});
         Matter.World.add(MA.engine.world, shape);
         return {x: shape.bounds.min.x, y: shape.bounds.min.y}
+    },
+    clearWorld : function() {
+        Matter.World.clear(MA.engine.world);
     }
 }
