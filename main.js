@@ -15,6 +15,7 @@ function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, t
 }
 function addTorch (x, z) { addSprite(x, -8, z, 1, 2, 1, 'torch.png', 4, 1, 4, 200)}
 function addSlug (x, z) { addSprite(x, -25, z, 4, 1, 0.4, 'slug.png')}
+function addLadder (x, z) { addSprite(x, 0, z, 2, 4, 0.6, 'ladder.png')}
 
 function addWallShape(x, z, points, close, cliff) {
     var firstPoint = null;
@@ -113,6 +114,7 @@ function loadLevel1() {
     addTorch(360, 300);
     addTorch(460, 300);
     addSlug(400, 100);
+    addLadder(680, 270);
 }
 
 function loadLevel2() {
