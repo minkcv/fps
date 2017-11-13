@@ -70,20 +70,18 @@ var TH = {
         sprite.scale.z = 50;
         TH.scene.add(sprite);
     },
-    addWallPlane : function(p1, p2, height, cliff) {
+    addWallPlane : function(p1, p2, height, textureName, y) {
         var length = distance(p1, p2);
         var geometry = new THREE.PlaneGeometry(length, height);
         var repeat = Math.floor(length / height);
-        var wallNumber = Math.floor(Math.random() * 2) + 1;
-        var mat = TH._loadTextureMaterial('cave_wall' + wallNumber + '.png', repeat || 1, 1);
+        var mat = TH._loadTextureMaterial(textureName, repeat || 1, 1);
         var plane = new THREE.Mesh(geometry, mat);
         var midpoint = {x: p1.x + (p2.x - p1.x) / 2, y: p1.y + (p2.y - p1.y) / 2};
         plane.position.x = midpoint.x;
         plane.position.z = midpoint.y;
         var angle = -Math.atan((p2.y - p1.y) / (p2.x - p1.x));
         plane.rotateY(angle);
-        if (cliff)
-            plane.position.y = 2 * TH.floorY;
+        plane.position.y = y;
         TH.scene.add(plane);
     },
     addFloor : function (x, y, z, width, depth, image) {

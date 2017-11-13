@@ -15,9 +15,12 @@ function addSprite(x, z) {
 }
 
 function addWallShape(x, z, points, close, cliff) {
-    var prevPoint = null;
     var firstPoint = null;
+    var prevPoint = null;
     var currentPoint = null;
+    var y = 0;
+    if (cliff)
+        y = 2 * TH.floorY;
 
     for (key in points) {
         if (prevPoint == null) {
@@ -28,14 +31,16 @@ function addWallShape(x, z, points, close, cliff) {
         currentPoint = points[key];
         var p1 = {x: prevPoint.x + x, y: prevPoint.y + z};
         var p2 = {x: currentPoint.x + x, y: currentPoint.y + z};
-        TH.addWallPlane(p1, p2, TH.floorY * -2, cliff);
+        var wallNumber = Math.floor(Math.random() * 2) + 1;
+        var textureName = 'cave_wall' + wallNumber + '.png';
+        TH.addWallPlane(p1, p2, TH.floorY * -2, textureName, y);
         MA.addWall(p1, p2);
         prevPoint = currentPoint;
     }
     if (close) {
         var p1 = {x: firstPoint.x + x, y: firstPoint.y + z};
         var p2 = {x: currentPoint.x + x, y: currentPoint.y + z};
-        TH.addWallPlane(p1, p2, TH.floorY * -2, cliff);
+        TH.addWallPlane(p1, p2, TH.floorY * -2, textureName, y);
         MA.addWall(p1, p2);
     }
 }
@@ -120,13 +125,12 @@ function loadLevel2() {
 function init() {
     MA.init();
     TH.init();
-    loadLevel1();
+    //loadLevel1();
     //TH.clearScene();
     //MA.clearWorld();
-    //loadLevel2();
+    loadLevel2();
 }
 init();
 
 MA.run();
 TH.run(update);
-
