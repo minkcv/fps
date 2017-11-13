@@ -49,25 +49,19 @@ var TH = {
         update();
         TH.renderer.render( TH.scene, TH.camera );
     },
-    addWall : function(x, z, width, height, depth) {
-        var texIndex = Math.floor(Math.random() * 2) + 1;
-        var geometry = new THREE.BoxGeometry(width, height, depth);
-        var box = new THREE.Mesh( geometry, TH.materials['wall' + texIndex] );
-        box.position.set(x, TH.floorY + height / 2, z);
-        TH.scene.add(box);
-    },
-    addSprite : function(x, z) {
-        var tex = TH._loadTexture('torch.png', 1, 1);
-        var animator = new TextureAnimator(tex, 4, 1, 4, 200);
-        TH.animators.push(animator);
+    addSprite : function(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration) {
+        var tex = TH._loadTexture(textureName, 1, 1);
+        if (tilesTotal) {
+            var animator = new TextureAnimator(tex, tilesX, tilesY, tilesTotal, duration);
+            TH.animators.push(animator);
+        }
         var mat = new THREE.SpriteMaterial({map: tex, color: 0xffffff});
         var sprite = new THREE.Sprite(mat);
         sprite.position.x = x;
         sprite.position.z = z;
-        sprite.position.y = -5;
-        sprite.scale.x = 25;
-        sprite.scale.y = 50;
-        sprite.scale.z = 50;
+        sprite.position.y = y;
+        sprite.scale.x = width * 25 * scale;
+        sprite.scale.y = height * 25 * scale;
         TH.scene.add(sprite);
     },
     addWallPlane : function(p1, p2, height, textureName, y) {

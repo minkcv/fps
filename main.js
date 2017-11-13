@@ -9,10 +9,12 @@ function addWall(x, z, width, height, depth) {
     MA.addBox(x, z, width, depth);
 }
 
-function addSprite(x, z) {
-    TH.addSprite(x, z);
+function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration) {
+    TH.addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration);
     MA.addCircle(x, z, 10);
 }
+function addTorch (x, z) { addSprite(x, -8, z, 1, 2, 1, 'torch.png', 4, 1, 4, 200)}
+function addSlug (x, z) { addSprite(x, -25, z, 4, 1, 0.4, 'slug.png')}
 
 function addWallShape(x, z, points, close, cliff) {
     var firstPoint = null;
@@ -108,8 +110,9 @@ function loadLevel1() {
     addWallShape(-1030, -550, maze2);
     TH.addFloor(0, TH.floorY, 0, 3500, 2500, 'floor.png');
     TH.addFloor(0, -TH.floorY, 0, 3500, 2500, 'ceiling.png');
-    addSprite(360, 300, 5);
-    addSprite(460, 300, 5);
+    addTorch(360, 300);
+    addTorch(460, 300);
+    addSlug(400, 100);
 }
 
 function loadLevel2() {
@@ -125,10 +128,10 @@ function loadLevel2() {
 function init() {
     MA.init();
     TH.init();
-    //loadLevel1();
+    loadLevel1();
     //TH.clearScene();
     //MA.clearWorld();
-    loadLevel2();
+    //loadLevel2();
 }
 init();
 
