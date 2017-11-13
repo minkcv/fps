@@ -9,12 +9,15 @@ function addWall(x, z, width, height, depth) {
     MA.addBox(x, z, width, depth);
 }
 
-function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration) {
-    TH.addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration);
+function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration, creature) {
+    var sprite = TH.addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration);
+    if (creature)
+        MA.addCircle(x, z, 10, sprite);
+    else
     MA.addCircle(x, z, 10);
 }
 function addTorch (x, z) { addSprite(x, -8, z, 1, 2, 1, 'torch.png', 4, 1, 4, 200)}
-function addSlug (x, z) { addSprite(x, -25, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 200)}
+function addSlug (x, z) { addSprite(x, -25, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 200, true)}
 function addLadder (x, z) { addSprite(x, 0, z, 2, 4, 0.6, 'ladder.png')}
 
 function addWallShape(x, z, points, close, cliff) {

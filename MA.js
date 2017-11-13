@@ -4,7 +4,7 @@ var MA = {
     engine : null,
     render : null,
     player : null,
-
+    creatures : [],
     init : function() {
         // module aliases
         var Engine = Matter.Engine,
@@ -24,6 +24,8 @@ var MA = {
         });
 
         MA.engine.world.gravity.y = 0;
+
+        Matter.Events.on(MA.engine, 'afterUpdate', function(event){MA._update(event)})
     },
     createPlayer : function(x, y, angle) {
         MA.player = Matter.Bodies.circle(x, y, 5);
@@ -50,9 +52,29 @@ var MA = {
         MA.render.bounds.min.y = y - MA.renderHeight / 2;
         MA.render.bounds.max.y = y + MA.renderHeight / 2;
     },
-    addCircle : function(x, z, radius) {
-        var circle = Matter.Bodies.circle(x, z, radius, {isStatic: true});
+    _update : function(event) {
+        for (index in MA.creatures) {
+            var body = MA.creatures[index].body;
+            if (Math.random() < 0.1) {
+                var xv = (0.5 - Math.random()) * 0.001;
+                var yv = (0.5 - Math.random()) * 0.001;
+                Matter.Body.applyForce(body, body.position, {x: xv, y: yv});
+            }
+        }
+        for (index in MA.creatures) {
+            var body = MA.creatures[index].body;
+            var sprite = MA.creatures[index].sprite;
+            sprite.position.x = body.position.x;
+            sprite.position.z = body.position.y;
+        }
+    },
+    addCircle : function(x, z, radius, sprite) {
+        var circle = Matter.Bodies.circle(x, z, radius, {isStatic: sprite == null});
         Matter.World.add(MA.engine.world, circle);
+        if (sprite) {
+            MA.creatures.push({body: circle, sprite: sprite});
+        }
+        return circle;
     },
     addBox : function(x, y, width, depth) {
         var boxA = Matter.Bodies.rectangle(x, y, width, depth, {isStatic: true});

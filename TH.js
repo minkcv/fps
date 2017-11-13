@@ -63,6 +63,7 @@ var TH = {
         sprite.scale.x = width * 25 * scale;
         sprite.scale.y = height * 25 * scale;
         TH.scene.add(sprite);
+        return sprite;
     },
     addWallPlane : function(p1, p2, height, textureName, y) {
         var length = distance(p1, p2);
