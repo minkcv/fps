@@ -101,6 +101,7 @@ function update() {
 
     MA.updateView();
     TH.update();
+    updateDebug();
 }
 
 function loadLevel1() {
