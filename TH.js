@@ -109,8 +109,9 @@ var TH = {
         var thPoints = [];
         for (var index in points) {
             var point = points[index];
-            thPoints.push(new THREE.Vector2(point.x + x, point.y + z));
+            thPoints.push(new THREE.Vector2(point.current.x + x, point.current.y + z));
         }
+        thPoints.push(new THREE.Vector2(point.next.x + x, point.next.y + z));
         var shape = new THREE.Shape(thPoints);
         var geometry = new THREE.ShapeGeometry(shape);
         var mat = TH._loadTextureMaterial('floor.png', 0.008, 0.008);
