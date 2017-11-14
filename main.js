@@ -118,6 +118,9 @@ function loadLevel1() {
     addTorch(360, 300);
     addTorch(460, 300);
     addSlug(800, 370);
+    addSlug(400, 270);
+    addSlug(640, 470);
+    addSlug(200, 370);
     addLadder(680, 270);
 }
 
