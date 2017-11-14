@@ -19,6 +19,7 @@ function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, t
 function addTorch (x, z) { addSprite(x, -8, z, 1, 2, 1, 'torch.png', 4, 1, 4, 200)}
 function addSlug (x, z) { addSprite(x, -25, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 200, true)}
 function addLadder (x, z) { addSprite(x, 0, z, 2, 4, 0.6, 'ladder.png')}
+function addFan (x, z) { addSprite(x, 0, z, 4, 4, 1, 'fan.png', 2, 1, 2, 300)}
 
 function addWallShape(x, z, points, close, cliff) {
     var firstPoint = null;
@@ -121,6 +122,7 @@ function loadLevel1() {
     addSlug(400, 270);
     addSlug(640, 470);
     addSlug(200, 370);
+    TH.addAnimatedPlane({x: 400, y: 50}, {x: 450, y: 50}, 10, 50, 'fan.png', 2, 1, 2, 300);
     addLadder(680, 270);
 }
 

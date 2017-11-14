@@ -65,6 +65,22 @@ var TH = {
         TH.scene.add(sprite);
         return sprite;
     },
+    addAnimatedPlane : function(p1, p2, y, height, textureName, tilesX, tilesY, tilesTotal, duration) {
+        var tex = TH._loadTexture(textureName, 1, 1);
+        var animator = new TextureAnimator(tex, tilesX, tilesY, tilesTotal, duration);
+        TH.animators.push(animator);
+        var mat = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: tex, side: THREE.DoubleSide, transparent: true});
+        var length = distance(p1, p2);
+        var geometry = new THREE.PlaneGeometry(length, height);
+        var plane = new THREE.Mesh(geometry, mat);
+        var midpoint = {x: p1.x + (p2.x - p1.x) / 2, y: p1.y + (p2.y - p1.y) / 2};
+        plane.position.x = midpoint.x;
+        plane.position.z = midpoint.y;
+        var angle = -Math.atan((p2.y - p1.y) / (p2.x - p1.x));
+        plane.rotateY(angle);
+        plane.position.y = 0;
+        TH.scene.add(plane);
+    },
     addWallPlane : function(p1, p2, height, textureName, y) {
         var length = distance(p1, p2);
         var geometry = new THREE.PlaneGeometry(length, height);
