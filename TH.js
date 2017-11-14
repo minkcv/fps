@@ -16,7 +16,7 @@ var TH = {
         TH.height = TH.threediv.clientHeight;
         TH.scene = new THREE.Scene();
         //TH.scene.background = new THREE.Color(0x0c1013);
-        TH.camera = new THREE.PerspectiveCamera(45, TH.width / TH.height, 0.1, 1000);
+        TH.camera = new THREE.PerspectiveCamera(45, TH.width / TH.height, 0.1, 4000);
         TH.scene.add(TH.camera);
         TH.camera.rotateY(-3.14 / 2);
 
@@ -78,7 +78,7 @@ var TH = {
         plane.position.z = midpoint.y;
         var angle = -Math.atan((p2.y - p1.y) / (p2.x - p1.x));
         plane.rotateY(angle);
-        plane.position.y = 0;
+        plane.position.y = y;
         TH.scene.add(plane);
     },
     addWallPlane : function(p1, p2, height, textureName, y) {
