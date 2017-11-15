@@ -22,7 +22,7 @@ function addLadder (x, z) { addSprite(x, 0, z, 2, 4, 0.6, 'ladder.png', true)}
 function addEKG (x, z) { addSprite(x, -14, z, 2, 4, 0.3, 'ekg.png', 4, 1, 4, 200, true)}
 function addStalagtite (x, y, z) { addSprite(x, y, z, 1, 2, 0.5, 'stalagtite' + (Math.floor(Math.random() * 4) + 1) + '.png')};
 
-function addWallShape(x, y, z, points, addBodies) {
+function addWallShape(x, y, z, height, points, textureNames, addBodies) {
     for (key in points) {
         var point = points[key];
         if (point.next < 0)
@@ -30,9 +30,8 @@ function addWallShape(x, y, z, points, addBodies) {
         var next = points[points[key].next];
         var p1 = {x: point.x + x, y: point.y + z};
         var p2 = {x: next.x + x, y: next.y + z};
-        var wallNumber = Math.floor(Math.random() * 2) + 1;
-        var textureName = 'cave_wall' + wallNumber + '.png';
-        TH.addWallPlane(p1, p2, TH.floorY * -2, textureName, y);
+        var textureName = textureNames[Math.floor(Math.random() * textureNames.length)];
+        TH.addWallPlane(p1, p2, height, textureName, y);
         if (addBodies)
             MA.addWall(p1, p2);
     }
