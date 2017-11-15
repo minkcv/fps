@@ -9,17 +9,18 @@ function addWall(x, z, width, height, depth) {
     MA.addBox(x, z, width, depth);
 }
 
-function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration, creature) {
+function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration, body, creature) {
     var sprite = TH.addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration);
     if (creature)
         MA.addCircle(x, z, 10, sprite);
-    else
-    MA.addCircle(x, z, 10);
+    else if (body)
+        MA.addCircle(x, z, 10);
 }
-function addTorch (x, z) { addSprite(x, -8, z, 1, 2, 1, 'torch.png', 4, 1, 4, 200)}
-function addSlug (x, y, z) { addSprite(x, y, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 200, true)}
-function addLadder (x, z) { addSprite(x, 0, z, 2, 4, 0.6, 'ladder.png')}
-function addEKG (x, z) { addSprite(x, -14, z, 2, 4, 0.3, 'ekg.png', 4, 1, 4, 200)}
+function addTorch (x, z) { addSprite(x, -8, z, 1, 2, 1, 'torch.png', 4, 1, 4, 200, true)}
+function addSlug (x, y, z) { addSprite(x, y, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 200, true, true)}
+function addLadder (x, z) { addSprite(x, 0, z, 2, 4, 0.6, 'ladder.png', true)}
+function addEKG (x, z) { addSprite(x, -14, z, 2, 4, 0.3, 'ekg.png', 4, 1, 4, 200, true)}
+function addStalagtite (x, y, z) { addSprite(x, y, z, 1, 2, 0.5, 'stalagtite' + (Math.floor(Math.random() * 4) + 1) + '.png')};
 
 function addWallShape(x, y, z, points, addBodies) {
     for (key in points) {

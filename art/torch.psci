@@ -17,25 +17,25 @@
       {
        "bg": 0,
        "char": 44,
-       "fg": 8,
+       "fg": 2,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 46,
-       "fg": 3,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 44,
-       "fg": 11,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 46,
-       "fg": 15,
+       "fg": 2,
        "xform": 0
       },
       {
@@ -73,7 +73,7 @@
  "palette": "c64_original",
  "selected_bg_color": 0,
  "selected_char": 9,
- "selected_fg_color": 12,
+ "selected_fg_color": 13,
  "selected_xform": 0,
  "width": 4
 }

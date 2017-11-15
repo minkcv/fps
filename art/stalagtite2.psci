@@ -1,0 +1,43 @@
+{
+ "active_frame": 0,
+ "active_layer": 0,
+ "camera": [
+  0.5,
+  -1.0,
+  5.926864548908198
+ ],
+ "charset": "c64_petscii",
+ "frames": [
+  {
+   "delay": 0.1,
+   "layers": [
+    {
+     "name": "Layer 1",
+     "tiles": [
+      {
+       "bg": 0,
+       "char": 25,
+       "fg": 13,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      }
+     ],
+     "visible": 1,
+     "z": 0
+    }
+   ]
+  }
+ ],
+ "height": 2,
+ "palette": "c64_original",
+ "selected_bg_color": 0,
+ "selected_char": 0,
+ "selected_fg_color": 13,
+ "selected_xform": 0,
+ "width": 1
+}
