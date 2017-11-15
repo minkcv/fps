@@ -21,19 +21,19 @@ function addSlug (x, z) { addSprite(x, -25, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 2
 function addLadder (x, z) { addSprite(x, 0, z, 2, 4, 0.6, 'ladder.png')}
 function addEKG (x, z) { addSprite(x, -14, z, 2, 4, 0.3, 'ekg.png', 4, 1, 4, 200)}
 
-function addWallShape(x, z, points, cliff) {
-    var y = 0;
-    if (cliff)
-        y = 2 * TH.floorY;
-
+function addWallShape(x, y, z, points, addBodies) {
     for (key in points) {
-        var pointPair = points[key];
-        var p1 = {x: pointPair.current.x + x, y: pointPair.current.y + z};
-        var p2 = {x: pointPair.next.x + x, y: pointPair.next.y + z};
+        var point = points[key];
+        if (point.next < 0)
+            continue;
+        var next = points[points[key].next];
+        var p1 = {x: point.x + x, y: point.y + z};
+        var p2 = {x: next.x + x, y: next.y + z};
         var wallNumber = Math.floor(Math.random() * 2) + 1;
         var textureName = 'cave_wall' + wallNumber + '.png';
         TH.addWallPlane(p1, p2, TH.floorY * -2, textureName, y);
-        MA.addWall(p1, p2);
+        if (addBodies)
+            MA.addWall(p1, p2);
     }
 }
 
@@ -96,10 +96,11 @@ function update() {
 function init() {
     MA.init();
     TH.init();
-    loadLevel1();
+    //loadLevel1();
     //TH.clearScene();
     //MA.clearWorld();
     //loadLevel2();
+    loadLevel2();
 }
 init();
 

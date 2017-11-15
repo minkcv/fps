@@ -105,18 +105,26 @@ var TH = {
         floor.rotation.x = -Math.PI / 2;
         TH.scene.add(floor);
     },
-    addFloorFromPoints : function(x, z, points) {
+    // points must be a single closed figure
+    addFloorFromPoints : function(x, y, z, points, textureName) {
         var thPoints = [];
-        for (var index in points) {
-            var point = points[index];
-            thPoints.push(new THREE.Vector2(point.current.x + x, point.current.y + z));
+        var startKey = Object.keys(points)[0];
+        var current = points[startKey];
+        thPoints.push(new THREE.Vector2(current.x + x, current.y + z));
+        while (true) {
+            if (current.next >= 0 && current.next != startKey) {
+                current = points[current.next];
+                thPoints.push(new THREE.Vector2(current.x + x, current.y + z));
+            }
+            else {
+                break;
+            }
         }
-        thPoints.push(new THREE.Vector2(point.next.x + x, point.next.y + z));
         var shape = new THREE.Shape(thPoints);
         var geometry = new THREE.ShapeGeometry(shape);
-        var mat = TH._loadTextureMaterial('floor.png', 0.008, 0.008);
+        var mat = TH._loadTextureMaterial(textureName, 0.008, 0.008);
         var floor = new THREE.Mesh(geometry, mat);
-        floor.position.y = TH.floorY;
+        floor.position.y = y;
         floor.rotation.x = Math.PI / 2;
         TH.scene.add(floor);
     },
