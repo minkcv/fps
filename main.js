@@ -17,7 +17,7 @@ function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, t
     MA.addCircle(x, z, 10);
 }
 function addTorch (x, z) { addSprite(x, -8, z, 1, 2, 1, 'torch.png', 4, 1, 4, 200)}
-function addSlug (x, z) { addSprite(x, -25, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 200, true)}
+function addSlug (x, y, z) { addSprite(x, y, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 200, true)}
 function addLadder (x, z) { addSprite(x, 0, z, 2, 4, 0.6, 'ladder.png')}
 function addEKG (x, z) { addSprite(x, -14, z, 2, 4, 0.3, 'ekg.png', 4, 1, 4, 200)}
 
