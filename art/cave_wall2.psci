@@ -155,8 +155,8 @@
       },
       {
        "bg": 1,
-       "char": 0,
-       "fg": 0,
+       "char": 46,
+       "fg": 13,
        "xform": 0
       },
       {
@@ -167,8 +167,8 @@
       },
       {
        "bg": 1,
-       "char": 0,
-       "fg": 0,
+       "char": 34,
+       "fg": 13,
        "xform": 0
       },
       {
@@ -223,7 +223,7 @@
  "height": 4,
  "palette": "c64_original",
  "selected_bg_color": 1,
- "selected_char": 137,
+ "selected_char": 34,
  "selected_fg_color": 13,
  "selected_xform": 0,
  "width": 4
