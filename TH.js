@@ -67,8 +67,10 @@ var TH = {
     },
     addAnimatedPlane : function(p1, p2, y, height, textureName, tilesX, tilesY, tilesTotal, duration) {
         var tex = TH._loadTexture(textureName, 1, 1);
-        var animator = new TextureAnimator(tex, tilesX, tilesY, tilesTotal, duration);
-        TH.animators.push(animator);
+        if (tilesTotal > 1) {
+            var animator = new TextureAnimator(tex, tilesX, tilesY, tilesTotal, duration);
+            TH.animators.push(animator);
+        }
         var mat = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: tex, side: THREE.DoubleSide, transparent: true});
         var length = distance(p1, p2);
         var geometry = new THREE.PlaneGeometry(length, height);
