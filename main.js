@@ -70,7 +70,7 @@ function moveBackward(moveSpeed) {
 
 function update() {
     var moveSpeed = 1;
-    if (keys.shift in keysDown)
+    if (debug && keys.shift in keysDown)
         moveSpeed = 2;
 
     if (keys.left in keysDown)
