@@ -104,6 +104,7 @@ function init() {
     //MA.clearWorld();
     //loadLevel2();
     loadLevel2();
+    loadLevel3();
 }
 init();
 
