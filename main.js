@@ -36,6 +36,11 @@ function addWallShape(x, y, z, height, points, textureNames, addBodies) {
             MA.addWall(p1, p2);
     }
 }
+function addAnimatedWall(p1, p2, y, height, textureName, tilesX, tilesY, totalTiles, delay, addBody) {
+    if (addBody)
+        MA.addWall(p1, p2);
+    TH.addAnimatedPlane(p1, p2, y, height, textureName, tilesX, tilesY, totalTiles, delay);
+}
 
 function rotatePlayer(angle) {
     MA.rotatePlayer(-angle);

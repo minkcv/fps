@@ -4,7 +4,7 @@
  "camera": [
   2.0,
   -2.0,
-  6.807614548908199
+  5.879773411704007
  ],
  "charset": "c64_petscii",
  "frames": [
@@ -16,74 +16,74 @@
      "tiles": [
       {
        "bg": 12,
-       "char": 5,
+       "char": 69,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 12,
-       "char": 78,
+       "char": 69,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 12,
-       "char": 78,
+       "char": 82,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 12,
-       "char": 84,
+       "char": 89,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 1,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 12,
+       "char": 115,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 1,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 1,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 12,
+       "char": 115,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 0,
-       "fg": 13,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 0,
-       "fg": 13,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 0,
-       "fg": 13,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 0,
-       "fg": 13,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 0,
-       "fg": 13,
-       "xform": 0
-      },
-      {
-       "bg": 1,
-       "char": 110,
-       "fg": 13,
+       "fg": 0,
        "xform": 0
       },
       {
@@ -100,13 +100,13 @@
       },
       {
        "bg": 12,
-       "char": 60,
+       "char": 97,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 12,
-       "char": 67,
+       "char": 69,
        "fg": 13,
        "xform": 0
       }
@@ -119,8 +119,8 @@
  ],
  "height": 4,
  "palette": "c64_original",
- "selected_bg_color": 1,
- "selected_char": 67,
+ "selected_bg_color": 12,
+ "selected_char": 89,
  "selected_fg_color": 13,
  "selected_xform": 0,
  "width": 4
