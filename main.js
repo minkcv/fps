@@ -88,9 +88,12 @@ function update() {
     else if (keys.d in keysDown)
         moveRight(moveSpeed);
 
-    MA.updateView();
+    if (debug) {
+        MA.updateView();
+        updateDebug();
+    }
+
     TH.update();
-    updateDebug();
 }
 
 function init() {

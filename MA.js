@@ -14,14 +14,16 @@ var MA = {
 
         MA.engine = Engine.create();
 
-        MA.render = Render.create({
-            element: document.getElementById('map'),
-            engine: MA.engine,
-            bounds: {min: {x:-400, y:-300}, max: {x:400, y:300}},
-            options: {
-                showAngleIndicator: true
-            }
-        });
+        if (debug) {
+            MA.render = Render.create({
+                element: document.getElementById('map'),
+                engine: MA.engine,
+                bounds: {min: {x:-400, y:-300}, max: {x:400, y:300}},
+                options: {
+                    showAngleIndicator: true
+                }
+            });
+        }
 
         MA.engine.world.gravity.y = 0;
 
@@ -39,7 +41,8 @@ var MA = {
     },
     run : function() {
         Matter.Engine.run(MA.engine);
-        Matter.Render.run(MA.render);
+        if (debug)
+            Matter.Render.run(MA.render);
     },
     movePlayer : function(x, y) {
         Matter.Body.translate(MA.player, {x: x, y: y});
