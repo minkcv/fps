@@ -1,6 +1,6 @@
 {
  "active_frame": 0,
- "active_layer": 1,
+ "active_layer": 0,
  "camera": [
   3.038809961835613,
   -2.1455805266054337,
@@ -17,97 +17,97 @@
       {
        "bg": 0,
        "char": 96,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 41,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 34,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 33,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 0,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 0,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 0,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 0,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 0,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 0,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 0,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 0,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 110,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 122,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 103,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
        "char": 103,
-       "fg": 2,
+       "fg": 13,
        "xform": 0
       }
      ],
@@ -120,97 +120,97 @@
       {
        "bg": 1,
        "char": 137,
-       "fg": 13,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 140,
-       "fg": 13,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 25,
-       "fg": 13,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 140,
-       "fg": 13,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 0,
-       "fg": 0,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 0,
-       "fg": 0,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 46,
-       "fg": 13,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 0,
-       "fg": 0,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 34,
-       "fg": 13,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 0,
-       "fg": 0,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 0,
-       "fg": 0,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 0,
-       "fg": 0,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 140,
-       "fg": 13,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 138,
-       "fg": 13,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 140,
-       "fg": 13,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 1,
        "char": 139,
-       "fg": 13,
+       "fg": 12,
        "xform": 0
       }
      ],
@@ -222,7 +222,7 @@
  ],
  "height": 4,
  "palette": "c64_original",
- "selected_bg_color": 1,
+ "selected_bg_color": 0,
  "selected_char": 34,
  "selected_fg_color": 13,
  "selected_xform": 0,
