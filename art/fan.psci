@@ -269,8 +269,8 @@
       },
       {
        "bg": 0,
-       "char": 0,
-       "fg": 0,
+       "char": 115,
+       "fg": 12,
        "xform": 0
       },
       {
@@ -293,8 +293,8 @@
       },
       {
        "bg": 0,
-       "char": 0,
-       "fg": 0,
+       "char": 115,
+       "fg": 12,
        "xform": 0
       },
       {
@@ -311,20 +311,20 @@
       },
       {
        "bg": 0,
-       "char": 0,
-       "fg": 0,
+       "char": 69,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 0,
-       "char": 0,
-       "fg": 0,
+       "char": 81,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 0,
-       "char": 0,
-       "fg": 0,
+       "char": 69,
+       "fg": 12,
        "xform": 0
       },
       {
@@ -335,20 +335,20 @@
       },
       {
        "bg": 0,
-       "char": 0,
-       "fg": 0,
+       "char": 69,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 0,
-       "char": 0,
-       "fg": 0,
+       "char": 81,
+       "fg": 12,
        "xform": 0
       },
       {
        "bg": 0,
-       "char": 0,
-       "fg": 0,
+       "char": 69,
+       "fg": 12,
        "xform": 0
       },
       {
@@ -365,8 +365,8 @@
       },
       {
        "bg": 0,
-       "char": 0,
-       "fg": 0,
+       "char": 115,
+       "fg": 12,
        "xform": 0
       },
       {
@@ -389,8 +389,8 @@
       },
       {
        "bg": 0,
-       "char": 0,
-       "fg": 0,
+       "char": 115,
+       "fg": 12,
        "xform": 0
       },
       {
@@ -414,9 +414,9 @@
  ],
  "height": 4,
  "palette": "c64_original",
- "selected_bg_color": 1,
- "selected_char": 95,
- "selected_fg_color": 13,
+ "selected_bg_color": 0,
+ "selected_char": 81,
+ "selected_fg_color": 12,
  "selected_xform": 0,
  "width": 8
 }
