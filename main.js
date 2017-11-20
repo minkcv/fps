@@ -24,6 +24,7 @@ function addGenerator (x, z) { addSprite(x, -14, z, 2, 4, 0.4, 'generator.png', 
 function addStalagtite (x, y, z) { addSprite(x, y, z, 1, 2, 0.5, 'stalagtite' + (Math.floor(Math.random() * 4) + 1) + '.png')}
 function addLamp (x, z) { addSprite(x, -18, z, 1, 2, 0.5, 'lamp.png', 2, 1, 2, 800, true)}
 function addScrap (x, z) { addSprite(x, -20, z, 1, 2, 0.5, 'scrap' + (Math.floor(Math.random() * 2) + 1) + '.png', 1, 1, 1, 800, true)}
+function addPipe (x, z) { addSprite(x, 0, z, 0.75, 3, 1, 'pipe' + (Math.floor(Math.random() * 4) + 1) + '.png', 1, 1, 1, 800, true)}
 
 function addWallShape(x, y, z, height, points, textureNames, addBodies) {
     for (key in points) {
@@ -79,7 +80,7 @@ function moveBackward(moveSpeed) {
 function update() {
     var moveSpeed = 1;
     if (debug && keys.shift in keysDown)
-        moveSpeed = 2;
+        moveSpeed = 4;
 
     if (keys.left in keysDown)
         rotatePlayer(0.03);
