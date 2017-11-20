@@ -139,7 +139,7 @@ function loadLevel3() {
     var mech3Floor = {"345":{"x":907,"y":2344,"next":346,"previous":367},"346":{"x":907,"y":2262,"next":347,"previous":345},"347":{"x":990,"y":2262,"next":348,"previous":346},"348":{"x":990,"y":2172,"next":351,"previous":347},"351":{"x":1065,"y":2172,"next":352,"previous":348},"352":{"x":1149,"y":2172,"next":353,"previous":351},"353":{"x":1149,"y":2208,"next":354,"previous":352},"354":{"x":1213,"y":2208,"next":355,"previous":353},"355":{"x":1213,"y":2169,"next":356,"previous":354},"356":{"x":1278,"y":2169,"next":357,"previous":355},"357":{"x":1325,"y":2169,"next":358,"previous":356},"358":{"x":1325,"y":2225,"next":359,"previous":357},"359":{"x":1325,"y":2273,"next":360,"previous":358},"360":{"x":1325,"y":2326,"next":361,"previous":359},"361":{"x":1380,"y":2326,"next":362,"previous":360},"362":{"x":1379,"y":2476,"next":367,"previous":361},"367":{"x":906,"y":2471,"next":345,"previous":362}};
     TH.addFloorFromPoints(0, TH.floorY * 3, 0, mech3Floor, 'mech_floor.png');
     TH.addFloorFromPoints(0, TH.floorY * -3, 0, mech3Floor, 'mech_ceiling.png');
-    addCanister(1950, 2980);
-    addCanister(2000, 3000);
-    addCanister(1950, 3020);
+    addScrap(1950, 2980);
+    addScrap(2000, 3000);
+    addScrap(1950, 3020);
 }
