@@ -51,7 +51,7 @@ var TH = {
     },
     addSprite : function(x, y, z, width, height, scale, textureName, tilesX, tilesY, tilesTotal, duration) {
         var tex = TH._loadTexture(textureName, 1, 1);
-        if (tilesTotal) {
+        if (tilesTotal > 0 && duration > 0) {
             var animator = new TextureAnimator(tex, tilesX, tilesY, tilesTotal, duration);
             TH.animators.push(animator);
         }

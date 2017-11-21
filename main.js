@@ -23,8 +23,9 @@ function addEKG (x, z) { addSprite(x, -14, z, 2, 4, 0.3, 'ekg.png', 4, 1, 4, 200
 function addGenerator (x, z) { addSprite(x, -14, z, 2, 4, 0.4, 'generator.png', 2, 1, 2, 300, true)}
 function addStalagtite (x, y, z) { addSprite(x, y, z, 1, 2, 0.5, 'stalagtite' + (Math.floor(Math.random() * 4) + 1) + '.png')}
 function addLamp (x, z) { addSprite(x, -18, z, 1, 2, 0.5, 'lamp.png', 2, 1, 2, 800, true)}
-function addScrap (x, z) { addSprite(x, -20, z, 1, 2, 0.5, 'scrap' + (Math.floor(Math.random() * 2) + 1) + '.png', 1, 1, 1, 800, true)}
-function addPipe (x, z) { addSprite(x, 0, z, 0.75, 3, 1, 'pipe' + (Math.floor(Math.random() * 4) + 1) + '.png', 1, 1, 1, 800, true)}
+function addScrap (x, z) { addSprite(x, -20, z, 1, 2, 0.5, 'scrap' + (Math.floor(Math.random() * 2) + 1) + '.png', 0, 0, 0, 0, true)}
+function addPipe (x, z) { addSprite(x, 0, z, 0.75, 3, 1, 'pipe' + (Math.floor(Math.random() * 4) + 1) + '.png', 0, 0, 0, 0, true)}
+function addPebble(x, z) { addSprite(x, -22, z, 1, 1, 1, 'pebble.png')}
 
 function addWallShape(x, y, z, height, points, textureNames, addBodies) {
     for (key in points) {
