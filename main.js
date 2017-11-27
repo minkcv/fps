@@ -115,6 +115,7 @@ function init() {
     //loadLevel2();
     loadLevel2();
     loadLevel3();
+    loadLevel4();
 }
 init();
 
