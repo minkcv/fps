@@ -88,26 +88,26 @@
       },
       {
        "bg": 16,
-       "char": 0,
-       "fg": 0,
+       "char": 110,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 16,
-       "char": 0,
-       "fg": 0,
+       "char": 110,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 16,
-       "char": 0,
-       "fg": 0,
+       "char": 110,
+       "fg": 13,
        "xform": 0
       },
       {
        "bg": 16,
-       "char": 0,
-       "fg": 0,
+       "char": 110,
+       "fg": 13,
        "xform": 0
       }
      ],
@@ -120,7 +120,7 @@
  "height": 4,
  "palette": "c64_original",
  "selected_bg_color": 16,
- "selected_char": 61,
+ "selected_char": 110,
  "selected_fg_color": 13,
  "selected_xform": 0,
  "width": 4
