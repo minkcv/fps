@@ -14,7 +14,7 @@ function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, t
     if (creature)
         MA.addCircle(x, z, 10, sprite);
     else if (body)
-        MA.addCircle(x, z, 10);
+        MA.addCircle(x, z, width * 8);
 }
 function addTorch (x, z) { addSprite(x, -8, z, 1, 2, 1, 'torch.png', 4, 1, 4, 200, true)}
 function addSlug (x, y, z) { addSprite(x, y, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 200, true, true)}
@@ -26,6 +26,7 @@ function addLamp (x, z) { addSprite(x, -18, z, 1, 2, 0.5, 'lamp.png', 2, 1, 2, 8
 function addScrap (x, z) { addSprite(x, -20, z, 1, 2, 0.5, 'scrap' + (Math.floor(Math.random() * 2) + 1) + '.png', 0, 0, 0, 0, true)}
 function addPipe (x, z) { addSprite(x, 0, z, 0.75, 3, 1, 'pipe' + (Math.floor(Math.random() * 4) + 1) + '.png', 0, 0, 0, 0, true)}
 function addPebble(x, z) { addSprite(x, -30, z, 1, 1, 1, 'pebble.png')}
+function addStruggler(x, z) { addSprite(x, -18, z, 4, 2, 0.5, 'corpse2.png', 2, 1, 2, 800, true)};
 
 function addWallShape(x, y, z, height, points, textureNames, addBodies) {
     for (key in points) {
