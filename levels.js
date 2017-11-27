@@ -158,4 +158,5 @@ function loadLevel3() {
     addScrap(550, 3110);
     addAnimatedWall({x: 614, y: 2750}, {x: 550, y: 2750}, 0, 60, 'grate.png', 1, 1, 1, 0, true);
     addAnimatedWall({x: 650, y: 2672}, {x: 650, y: 2726}, 0, 60, 'grate.png', 1, 1, 1, 0, true);
+    addAnimatedWall({x: 260, y: 2595}, {x: 330, y: 2595}, 0, 60, 'pipe_tree.png', 8, 1, 8, 300, true);
 }
