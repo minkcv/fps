@@ -19,7 +19,7 @@ function addSprite(x, y, z, width, height, scale, textureName, tilesX, tilesY, t
 function addTorch (x, z) { addSprite(x, -8, z, 1, 2, 1, 'torch.png', 4, 1, 4, 200, true)}
 function addSlug (x, y, z) { addSprite(x, y, z, 2, 1, 0.4, 'slug.png', 4, 1, 4, 200, true, true)}
 function addLadder (x, z) { addSprite(x, 0, z, 2, 4, 0.6, 'ladder.png', true)}
-function addEKG (x, z) { addSprite(x, -14, z, 2, 4, 0.3, 'ekg.png', 4, 1, 4, 200, true)}
+function addEKG (x, z) { addSprite(x, -10, z, 2, 4, 0.4, 'ekg.png', 4, 1, 4, 200, true)}
 function addGenerator (x, z) { addSprite(x, -14, z, 2, 4, 0.4, 'generator.png', 2, 1, 2, 300, true)}
 function addStalagtite (x, y, z) { addSprite(x, y, z, 1, 2, 0.5, 'stalagtite' + (Math.floor(Math.random() * 4) + 1) + '.png')}
 function addLamp (x, z) { addSprite(x, -18, z, 1, 2, 0.5, 'lamp.png', 2, 1, 2, 800, true)}

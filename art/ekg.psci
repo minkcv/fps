@@ -4,7 +4,7 @@
  "camera": [
   4.0,
   -2.0,
-  9.735664548908199
+  5.547766094109007
  ],
  "charset": "c64_petscii",
  "frames": [
@@ -64,9 +64,9 @@
       },
       {
        "bg": 0,
-       "char": 31,
+       "char": 36,
        "fg": 6,
-       "xform": 0
+       "xform": 1
       },
       {
        "bg": 0,
@@ -82,9 +82,9 @@
       },
       {
        "bg": 0,
-       "char": 31,
+       "char": 36,
        "fg": 6,
-       "xform": 0
+       "xform": 1
       },
       {
        "bg": 0,
@@ -415,7 +415,7 @@
  "height": 4,
  "palette": "c64_original",
  "selected_bg_color": 0,
- "selected_char": 45,
+ "selected_char": 36,
  "selected_fg_color": 6,
  "selected_xform": 0,
  "width": 8
