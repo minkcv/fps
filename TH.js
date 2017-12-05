@@ -83,10 +83,10 @@ var TH = {
         plane.position.y = y;
         TH.scene.add(plane);
     },
-    addWallPlane : function(p1, p2, height, textureName, y, transparent) {
+    addWallPlane : function(p1, p2, width, height, textureName, y, transparent) {
         var length = distance(p1, p2);
         var geometry = new THREE.PlaneGeometry(length, height);
-        var repeat = Math.floor(length / height);
+        var repeat = Math.floor(length / width);
         var mat = TH._loadTextureMaterial(textureName, repeat || 1, 1, transparent);
         var plane = new THREE.Mesh(geometry, mat);
         var midpoint = {x: p1.x + (p2.x - p1.x) / 2, y: p1.y + (p2.y - p1.y) / 2};

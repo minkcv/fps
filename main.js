@@ -29,7 +29,7 @@ function addPebble(x, z) { addSprite(x, -30, z, 1, 1, 1, 'pebble.png')}
 function addStruggler(x, z) { addSprite(x, -18, z, 4, 2, 0.5, 'corpse2.png', 2, 1, 2, 800, true)}
 function addScaffoldWire(x, z) {addSprite(x, -TH.floorY, z, 0.75, 5, 1, 'wire.png', 0, 0, 0, 0)}
 
-function addWallShape(x, y, z, height, points, textureNames, addBodies, transparent) {
+function addWallShape(x, y, z, width, height, points, textureNames, addBodies, transparent) {
     for (key in points) {
         var point = points[key];
         if (point.next < 0)
@@ -38,7 +38,7 @@ function addWallShape(x, y, z, height, points, textureNames, addBodies, transpar
         var p1 = {x: point.x + x, y: point.y + z};
         var p2 = {x: next.x + x, y: next.y + z};
         var textureName = textureNames[Math.floor(Math.random() * textureNames.length)];
-        TH.addWallPlane(p1, p2, height, textureName, y, transparent);
+        TH.addWallPlane(p1, p2, width, height, textureName, y, transparent);
         if (addBodies)
             MA.addWall(p1, p2);
     }
