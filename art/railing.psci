@@ -1,10 +1,10 @@
 {
  "active_frame": 0,
- "active_layer": 0,
+ "active_layer": 1,
  "camera": [
   2.0,
-  -1.0,
-  3.655966094109004
+  -0.5,
+  3.8958484547991956
  ],
  "charset": "c64_petscii",
  "frames": [
@@ -14,30 +14,6 @@
     {
      "name": "Layer 1",
      "tiles": [
-      {
-       "bg": 0,
-       "char": 110,
-       "fg": 13,
-       "xform": 0
-      },
-      {
-       "bg": 0,
-       "char": 110,
-       "fg": 13,
-       "xform": 0
-      },
-      {
-       "bg": 0,
-       "char": 110,
-       "fg": 13,
-       "xform": 0
-      },
-      {
-       "bg": 0,
-       "char": 110,
-       "fg": 13,
-       "xform": 0
-      },
       {
        "bg": 0,
        "char": 109,
@@ -65,14 +41,45 @@
      ],
      "visible": 1,
      "z": 0
+    },
+    {
+     "name": "Layer 2",
+     "tiles": [
+      {
+       "bg": 0,
+       "char": 78,
+       "fg": 13,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 78,
+       "fg": 13,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 78,
+       "fg": 13,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 78,
+       "fg": 13,
+       "xform": 0
+      }
+     ],
+     "visible": 1,
+     "z": 0.1
     }
    ]
   }
  ],
- "height": 2,
+ "height": 1,
  "palette": "c64_original",
  "selected_bg_color": 0,
- "selected_char": 110,
+ "selected_char": 78,
  "selected_fg_color": 13,
  "selected_xform": 0,
  "width": 4
