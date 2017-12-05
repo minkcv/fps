@@ -27,9 +27,9 @@ var TH = {
         TH.texloader = new THREE.TextureLoader();
         TH.clock = new THREE.Clock();
     },
-    _loadTextureMaterial : function(name, repeatX, repeatY) {
+    _loadTextureMaterial : function(name, repeatX, repeatY, transp) {
         var texture = TH._loadTexture(name, repeatX, repeatY);
-        return new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: texture, side: THREE.DoubleSide});
+        return new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: texture, side: THREE.DoubleSide, transparent: transp || false});
     },
     _loadSpriteMaterial : function(name, repeatX, repeatY) {
         var tex = TH._loadTexture(name, repeatX, repeatY);
@@ -83,11 +83,11 @@ var TH = {
         plane.position.y = y;
         TH.scene.add(plane);
     },
-    addWallPlane : function(p1, p2, height, textureName, y) {
+    addWallPlane : function(p1, p2, height, textureName, y, transparent) {
         var length = distance(p1, p2);
         var geometry = new THREE.PlaneGeometry(length, height);
         var repeat = Math.floor(length / height);
-        var mat = TH._loadTextureMaterial(textureName, repeat || 1, 1);
+        var mat = TH._loadTextureMaterial(textureName, repeat || 1, 1, transparent);
         var plane = new THREE.Mesh(geometry, mat);
         var midpoint = {x: p1.x + (p2.x - p1.x) / 2, y: p1.y + (p2.y - p1.y) / 2};
         plane.position.x = midpoint.x;
@@ -97,10 +97,10 @@ var TH = {
         plane.position.y = y;
         TH.scene.add(plane);
     },
-    addFloor : function (x, y, z, width, depth, image) {
+    addFloor : function (x, y, z, width, depth, image, transparent) {
         var repeatX = Math.floor(width / 100);
         var repeatY = Math.floor(depth / 100);
-        var mat = TH._loadTextureMaterial(image, repeatX || 1, repeatY || 1);
+        var mat = TH._loadTextureMaterial(image, repeatX || 1, repeatY || 1, transparent);
         var geometry = new THREE.PlaneGeometry(width, depth);
         var floor = new THREE.Mesh( geometry, mat);
         floor.position.set(x, y, z);
@@ -108,7 +108,7 @@ var TH = {
         TH.scene.add(floor);
     },
     // points must be a single closed figure
-    addFloorFromPoints : function(x, y, z, points, textureName) {
+    addFloorFromPoints : function(x, y, z, points, textureName, transparent) {
         var thPoints = [];
         var startKey = Object.keys(points)[0];
         var current = points[startKey];
@@ -124,7 +124,7 @@ var TH = {
         }
         var shape = new THREE.Shape(thPoints);
         var geometry = new THREE.ShapeGeometry(shape);
-        var mat = TH._loadTextureMaterial(textureName, 0.008, 0.008);
+        var mat = TH._loadTextureMaterial(textureName, 0.008, 0.008, transparent);
         var floor = new THREE.Mesh(geometry, mat);
         floor.position.y = y;
         floor.rotation.x = Math.PI / 2;
