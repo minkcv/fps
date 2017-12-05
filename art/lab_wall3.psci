@@ -1,6 +1,6 @@
 {
  "active_frame": 0,
- "active_layer": 0,
+ "active_layer": 1,
  "camera": [
   2.0,
   -2.0,
@@ -46,13 +46,13 @@
       },
       {
        "bg": 16,
-       "char": 77,
+       "char": 0,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 16,
-       "char": 79,
+       "char": 0,
        "fg": 13,
        "xform": 0
       },
@@ -70,13 +70,13 @@
       },
       {
        "bg": 16,
-       "char": 109,
+       "char": 110,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 16,
-       "char": 111,
+       "char": 110,
        "fg": 13,
        "xform": 0
       },
@@ -149,13 +149,13 @@
       },
       {
        "bg": 0,
-       "char": 156,
+       "char": 0,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
-       "char": 156,
+       "char": 0,
        "fg": 13,
        "xform": 0
       },
@@ -173,13 +173,13 @@
       },
       {
        "bg": 0,
-       "char": 156,
+       "char": 0,
        "fg": 13,
        "xform": 0
       },
       {
        "bg": 0,
-       "char": 156,
+       "char": 0,
        "fg": 13,
        "xform": 0
       },
@@ -222,9 +222,9 @@
  ],
  "height": 4,
  "palette": "c64_original",
- "selected_bg_color": 16,
- "selected_char": 110,
- "selected_fg_color": 13,
+ "selected_bg_color": 0,
+ "selected_char": 0,
+ "selected_fg_color": 0,
  "selected_xform": 0,
  "width": 4
 }
