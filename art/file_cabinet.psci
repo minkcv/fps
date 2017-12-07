@@ -1,0 +1,134 @@
+{
+ "active_frame": 0,
+ "active_layer": 0,
+ "camera": [
+  1.0,
+  -2.0,
+  2.8125
+ ],
+ "charset": "c64_petscii",
+ "frames": [
+  {
+   "delay": 0.1,
+   "layers": [
+    {
+     "name": "Layer 1",
+     "tiles": [
+      {
+       "bg": 12,
+       "char": 45,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 12,
+       "char": 45,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 12,
+       "char": 45,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 12,
+       "char": 45,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 12,
+       "char": 45,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 12,
+       "char": 45,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 78,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 78,
+       "fg": 12,
+       "xform": 0
+      }
+     ],
+     "visible": 1,
+     "z": 0
+    },
+    {
+     "name": "Layer 2",
+     "tiles": [
+      {
+       "bg": 0,
+       "char": 46,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 46,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 46,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 46,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 46,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 46,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 0,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 0,
+       "fg": 16,
+       "xform": 0
+      }
+     ],
+     "visible": 1,
+     "z": 0.01
+    }
+   ]
+  }
+ ],
+ "height": 4,
+ "palette": "c64_original",
+ "selected_bg_color": 0,
+ "selected_char": 78,
+ "selected_fg_color": 12,
+ "selected_xform": 0,
+ "width": 2
+}

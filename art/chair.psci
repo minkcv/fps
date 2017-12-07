@@ -1,0 +1,86 @@
+{
+ "active_frame": 0,
+ "active_layer": 0,
+ "camera": [
+  0.5,
+  -2.0,
+  2.8125
+ ],
+ "charset": "c64_petscii",
+ "frames": [
+  {
+   "delay": 0.1,
+   "layers": [
+    {
+     "name": "Layer 1",
+     "tiles": [
+      {
+       "bg": 0,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 44,
+       "fg": 12,
+       "xform": 3
+      },
+      {
+       "bg": 0,
+       "char": 111,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 20,
+       "fg": 13,
+       "xform": 0
+      }
+     ],
+     "visible": 1,
+     "z": 0
+    },
+    {
+     "name": "Layer 2",
+     "tiles": [
+      {
+       "bg": 0,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 0,
+       "char": 34,
+       "fg": 12,
+       "xform": 2
+      }
+     ],
+     "visible": 1,
+     "z": 0.1
+    }
+   ]
+  }
+ ],
+ "height": 4,
+ "palette": "c64_original",
+ "selected_bg_color": 0,
+ "selected_char": 60,
+ "selected_fg_color": 12,
+ "selected_xform": 3,
+ "width": 1
+}

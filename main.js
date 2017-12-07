@@ -30,6 +30,9 @@ function addStruggler(x, z) { addSprite(x, -18, z, 4, 2, 0.5, 'corpse2.png', 2, 
 function addScaffoldWire(x, z) {addSprite(x, -TH.floorY, z, 0.75, 5, 1, 'wire.png', 0, 0, 0, 0)}
 function addTube(x, z) {addSprite(x, 0, z, 4, 8, 0.6, 'tube.png', 2, 1, 2, 800, true)}
 function addEmptyTube(x, z) {addSprite(x, 0, z, 4, 8, 0.6, 'empty_tube.png', 0, 0, 0, 0, true)}
+function addComputer(x, z) {addSprite(x, -10, z, 4, 4, 0.4, 'computer.png', 2, 1, 2, 400, true)}
+function addChair(x, z) {addSprite(x, -10, z, 1, 4, 0.4, 'chair.png', 0, 0, 0, 0, true)}
+function addFileCabinet(x, z) {addSprite(x, -16, z, 2, 4, 0.4, 'file_cabinet.png', 0, 0, 0, 0, true)}
 
 function addWallShape(x, y, z, width, height, points, textureNames, addBodies, transparent) {
     for (key in points) {
