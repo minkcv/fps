@@ -1,0 +1,127 @@
+{
+ "active_frame": 0,
+ "active_layer": 0,
+ "camera": [
+  3.067794500938594,
+  -1.8515365934523877,
+  4.758334066302706
+ ],
+ "charset": "c64_petscii",
+ "frames": [
+  {
+   "delay": 0.1,
+   "layers": [
+    {
+     "name": "Layer 1",
+     "tiles": [
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 39,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 117,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 73,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 82,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 0,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 115,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 117,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 117,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 89,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 74,
+       "fg": 11,
+       "xform": 0
+      }
+     ],
+     "visible": 1,
+     "z": 0
+    }
+   ]
+  }
+ ],
+ "height": 4,
+ "palette": "c64_original",
+ "selected_bg_color": 3,
+ "selected_char": 0,
+ "selected_fg_color": 0,
+ "selected_xform": 0,
+ "width": 4
+}

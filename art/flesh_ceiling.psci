@@ -1,0 +1,415 @@
+{
+ "active_frame": 0,
+ "active_layer": 0,
+ "camera": [
+  4.0,
+  -4.0,
+  5.625
+ ],
+ "charset": "c64_petscii",
+ "frames": [
+  {
+   "delay": 0.1,
+   "layers": [
+    {
+     "name": "Layer 1",
+     "tiles": [
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 115,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 73,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 68,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 69,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 74,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 74,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 117,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 76,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 89,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 71,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 117,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 115,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 117,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 114,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 89,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 68,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 97,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 68,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 74,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 90,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 46,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 117,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 73,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 68,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 73,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 69,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 68,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 90,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 75,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 69,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 71,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 82,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 89,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 71,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 73,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 90,
+       "fg": 11,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 58,
+       "fg": 16,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      },
+      {
+       "bg": 3,
+       "char": 0,
+       "fg": 12,
+       "xform": 0
+      }
+     ],
+     "visible": 1,
+     "z": 0
+    }
+   ]
+  }
+ ],
+ "height": 8,
+ "palette": "c64_original",
+ "selected_bg_color": 3,
+ "selected_char": 46,
+ "selected_fg_color": 16,
+ "selected_xform": 0,
+ "width": 8
+}
