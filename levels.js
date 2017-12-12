@@ -344,4 +344,16 @@ function loadLevel5() {
     var entryWall = {"841":{"x":1882,"y":212,"next":-1,"previous":"842"},"842":{"x":1819,"y":212,"next":"841","previous":-1}};
     addWallShape(0, -45, 5000, shortWidth, shortHeight, entryWall, shortWalls);
     addWallShape(0, 45, 5000, shortWidth, shortHeight, entryWall, shortWalls);
+    var tentacleY = 0;
+    addTentacle2(1870, tentacleY, 5220);
+    addTentacle2(1845, tentacleY, 5300);
+    addTentacle2(1905, tentacleY, 5460);
+    addTentacle2(1840, tentacleY, 5560);
+    addTentacle2(2120, tentacleY, 5590);
+    addTentacle2(2185, tentacleY, 5710);
+    addTentacle2(1980, tentacleY, 5710);
+    addTentacle2(1860, tentacleY, 5770);
+    addTentacle2(1810, tentacleY, 5620);
+    addTentacle2(1635, tentacleY, 5640);
+    addTentacle2(1770, tentacleY, 5425);
 }
