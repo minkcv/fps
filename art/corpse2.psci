@@ -24,7 +24,7 @@
        "bg": 0,
        "char": 38,
        "fg": 3,
-       "xform": 0
+       "xform": 3
       },
       {
        "bg": 0,
@@ -48,7 +48,7 @@
        "bg": 0,
        "char": 38,
        "fg": 3,
-       "xform": 0
+       "xform": 3
       },
       {
        "bg": 0,
@@ -223,8 +223,8 @@
  "height": 2,
  "palette": "c64_original",
  "selected_bg_color": 0,
- "selected_char": 33,
+ "selected_char": 38,
  "selected_fg_color": 3,
- "selected_xform": 0,
+ "selected_xform": 3,
  "width": 8
 }
