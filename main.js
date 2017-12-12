@@ -27,12 +27,14 @@ function addScrap (x, z) { addSprite(x, -20, z, 1, 2, 0.5, 'scrap' + (Math.floor
 function addPipe (x, z) { addSprite(x, 0, z, 0.75, 3, 1, 'pipe' + (Math.floor(Math.random() * 4) + 1) + '.png', 0, 0, 0, 0, true)}
 function addPebble(x, z) { addSprite(x, -30, z, 1, 1, 1, 'pebble.png')}
 function addStruggler(x, z) { addSprite(x, -18, z, 4, 2, 0.5, 'corpse2.png', 2, 1, 2, 800, true)}
-function addScaffoldWire(x, z) {addSprite(x, -TH.floorY, z, 0.75, 5, 1, 'wire.png', 0, 0, 0, 0)}
-function addTube(x, z) {addSprite(x, 0, z, 4, 8, 0.6, 'tube.png', 2, 1, 2, 800, true)}
-function addEmptyTube(x, z) {addSprite(x, 0, z, 4, 8, 0.6, 'empty_tube.png', 0, 0, 0, 0, true)}
-function addComputer(x, z) {addSprite(x, -10, z, 4, 4, 0.4, 'computer.png', 2, 1, 2, 400, true)}
-function addChair(x, z) {addSprite(x, -10, z, 1, 4, 0.4, 'chair.png', 0, 0, 0, 0, true)}
-function addFileCabinet(x, z) {addSprite(x, -16, z, 2, 4, 0.4, 'file_cabinet.png', 0, 0, 0, 0, true)}
+function addScaffoldWire(x, z) { addSprite(x, -TH.floorY, z, 0.75, 5, 1, 'wire.png', 0, 0, 0, 0)}
+function addTube(x, z) { addSprite(x, 0, z, 4, 8, 0.6, 'tube.png', 2, 1, 2, 800, true)}
+function addEmptyTube(x, z) { addSprite(x, 0, z, 4, 8, 0.6, 'empty_tube.png', 0, 0, 0, 0, true)}
+function addComputer(x, z) { addSprite(x, -10, z, 4, 4, 0.4, 'computer.png', 2, 1, 2, 400, true)}
+function addChair(x, z) { addSprite(x, -10, z, 1, 4, 0.4, 'chair.png', 0, 0, 0, 0, true)}
+function addFileCabinet(x, z) { addSprite(x, -16, z, 2, 4, 0.4, 'file_cabinet.png', 0, 0, 0, 0, true)}
+function addHiveMind(x, z) { addSprite(x, 0, z, 8, 16, 0.5, 'hivemind.png')}
+function addHiveMindInner(x, z) { addSprite(x, 0, z, 4, 4, 0.5, 'hivemind_inner.png', 4, 1, 4, 300)}
 
 function addWallShape(x, y, z, width, height, points, textureNames, addBodies, transparent) {
     for (key in points) {
