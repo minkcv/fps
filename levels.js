@@ -124,7 +124,6 @@ function loadLevel3() {
     addLamp(1770, 2500);
     var mech2 = {"242":{"x":1416,"y":423,"next":"308","previous":-1},"248":{"x":1411,"y":734,"next":-1,"previous":"334"},"308":{"x":1356,"y":423,"next":"309","previous":"242"},"309":{"x":1283,"y":423,"next":"310","previous":"308"},"310":{"x":1226,"y":423,"next":"311","previous":"309"},"311":{"x":1162,"y":423,"next":"312","previous":"310"},"312":{"x":1162,"y":343,"next":"313","previous":"311"},"313":{"x":1162,"y":267,"next":"318","previous":"312"},"318":{"x":1162,"y":172,"next":-1,"previous":"313"},"319":{"x":1081,"y":172,"next":"320","previous":-1},"320":{"x":1081,"y":265,"next":"321","previous":"319"},"321":{"x":1081,"y":346,"next":"322","previous":"320"},"322":{"x":1001,"y":346,"next":"323","previous":"321"},"323":{"x":1001,"y":435,"next":"324","previous":"322"},"324":{"x":911,"y":435,"next":"340","previous":"323"},"327":{"x":920,"y":731,"next":"328","previous":"338"},"328":{"x":1014,"y":731,"next":"329","previous":"327"},"329":{"x":1107,"y":731,"next":"330","previous":"328"},"330":{"x":1107,"y":799,"next":"331","previous":"329"},"331":{"x":1187,"y":799,"next":"332","previous":"330"},"332":{"x":1189,"y":736,"next":"333","previous":"331"},"333":{"x":1259,"y":736,"next":"334","previous":"332"},"334":{"x":1337,"y":735,"next":"248","previous":"333"},"336":{"x":761,"y":435,"next":"341","previous":"340"},"337":{"x":766,"y":733,"next":"338","previous":"342"},"338":{"x":843,"y":733,"next":"327","previous":"337"},"340":{"x":847,"y":434,"next":"336","previous":"324"},"341":{"x":699,"y":434,"next":-1,"previous":"336"},"342":{"x":699,"y":733,"next":"337","previous":-1},"343":{"x":1358,"y":518,"next":344,"previous":346},"344":{"x":1358,"y":608,"next":345,"previous":343},"345":{"x":1213,"y":608,"next":346,"previous":344},"346":{"x":1212,"y":518,"next":343,"previous":345}};
     addWallShape(0, 0, 2500, shortWidth, shortHeight, mech2, shortMechWalls, true);
-    //addAnimatedWall({x: 1160, y: 2780}, {x: 1080, y: 2780}, 0, 60, 'fan.png', 2, 1, 2, 300, true);
     var mech2Floor1 = {"242":{"x":1416,"y":423,"next":308,"previous":"248"},"248":{"x":1411,"y":734,"next":"242","previous":334},"308":{"x":1356,"y":423,"next":309,"previous":"242"},"309":{"x":1283,"y":423,"next":310,"previous":308},"310":{"x":1226,"y":423,"next":311,"previous":309},"311":{"x":1162,"y":423,"next":312,"previous":310},"312":{"x":1162,"y":343,"next":313,"previous":311},"313":{"x":1162,"y":267,"next":318,"previous":312},"318":{"x":1162,"y":172,"next":319,"previous":313},"319":{"x":1081,"y":172,"next":320,"previous":318},"320":{"x":1081,"y":265,"next":321,"previous":319},"321":{"x":1081,"y":346,"next":322,"previous":320},"322":{"x":1001,"y":346,"next":323,"previous":321},"323":{"x":1001,"y":435,"next":337,"previous":322},"328":{"x":1014,"y":731,"next":329,"previous":337},"329":{"x":1107,"y":731,"next":330,"previous":328},"330":{"x":1107,"y":799,"next":331,"previous":329},"331":{"x":1187,"y":799,"next":332,"previous":330},"332":{"x":1189,"y":736,"next":333,"previous":331},"333":{"x":1259,"y":736,"next":334,"previous":332},"334":{"x":1337,"y":735,"next":"248","previous":333},"337":{"x":1001,"y":732,"next":328,"previous":323}};
     TH.addFloorFromPoints(0, TH.floorY, 2500, mech2Floor1, 'mech_floor.png');
     var mech2Floor2 = {"323":{"x":1001,"y":435,"next":338,"previous":340},"338":{"x":1001,"y":523,"next":339,"previous":323},"339":{"x":847,"y":523,"next":340,"previous":338},"340":{"x":847,"y":434,"next":323,"previous":339}};
@@ -159,6 +158,12 @@ function loadLevel3() {
     TH.addFloorFromPoints(0, TH.floorY, 2500, scaffold, 'scaffold.png', true);
     addScaffoldWire(1088, 2503);
     addScaffoldWire(1158, 2503);
+    var tentacleY = 68;
+    addTentacle(1015, tentacleY, 2470);
+    addTentacle(1240, tentacleY, 2560);
+    addTentacle(1330, tentacleY, 2420);
+    addHangingScrap(1040, tentacleY, 2220);
+    addHangingScrap(1130, tentacleY, 2420);
     addScrap(1950, 2980);
     addScrap(2000, 3000);
     addScrap(1950, 3020);
