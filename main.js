@@ -35,6 +35,7 @@ function addChair(x, z) { addSprite(x, -10, z, 1, 4, 0.4, 'chair.png', 0, 0, 0, 
 function addFileCabinet(x, z) { addSprite(x, -16, z, 2, 4, 0.4, 'file_cabinet.png', 0, 0, 0, 0, true)}
 function addHiveMind(x, z) { addSprite(x, 0, z, 8, 16, 0.5, 'hivemind.png')}
 function addHiveMindInner(x, z) { addSprite(x, 0, z, 4, 4, 0.5, 'hivemind_inner.png', 4, 1, 4, 300)}
+function addTentacle(x, y, z) { addSprite(x, y, z, 1, 4, 0.5, 'tentacle.png', 4, 1, 4, 400)}
 
 function addWallShape(x, y, z, width, height, points, textureNames, addBodies, transparent) {
     for (key in points) {
