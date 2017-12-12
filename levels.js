@@ -326,9 +326,10 @@ function loadLevel4() {
     var labs9Floor = {"834":{"x":2006,"y":0,"next":836,"previous":835},"835":{"x":1935,"y":0,"next":834,"previous":848},"836":{"x":2006,"y":50,"next":837,"previous":834},"837":{"x":2006,"y":103,"next":838,"previous":836},"838":{"x":1939,"y":103,"next":839,"previous":837},"839":{"x":1882,"y":103,"next":840,"previous":838},"840":{"x":1882,"y":158,"next":841,"previous":839},"841":{"x":1882,"y":212,"next":842,"previous":840},"842":{"x":1819,"y":212,"next":843,"previous":841},"843":{"x":1819,"y":160,"next":844,"previous":842},"844":{"x":1819,"y":99,"next":846,"previous":843},"846":{"x":1819,"y":44,"next":847,"previous":844},"847":{"x":1882,"y":44,"next":848,"previous":846},"848":{"x":1935,"y":44,"next":835,"previous":847}};
     TH.addFloorFromPoints(0, TH.floorY, 5000, labs9Floor, 'lab_floor.png');
     TH.addFloorFromPoints(0, -TH.floorY, 5000, labs9Floor, 'lab_ceiling.png');
-    addTentacle(1925, 0, 5090);
-    addTentacle(1840, 0, 5060);
-    addTentacle(1870, 0, 5150);
+    addTentacle(1925, 10, 5090);
+    addTentacle(1840, 10, 5060);
+    addTentacle(1870, 10, 5150);
+    addTentacle(1825, 10, 5195);
 }
 
 function loadLevel5() {
@@ -356,4 +357,6 @@ function loadLevel5() {
     addTentacle2(1810, tentacleY, 5620);
     addTentacle2(1635, tentacleY, 5640);
     addTentacle2(1770, tentacleY, 5425);
+    addOrgan(2070, 5470);
+    addOrgan(2140, 5740);
 }
