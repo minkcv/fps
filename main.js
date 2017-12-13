@@ -40,6 +40,7 @@ function addTentacle2(x, y, z) { addSprite(x, y, z, 1, 4, 0.5, 'tentacle2.png', 
 function addHangingScrap(x, y, z) { addSprite(x, y, z, 1, 4, 0.5, 'scrap' + (Math.floor(Math.random() * 3) + 1) + 'hang.png')}
 function addOrgan(x, z) { addSprite(x, 0, z, 2, 4, 0.5, 'organ1.png', 4, 1, 4, 300, true)}
 function addWart(x, y, z) { addSprite(x, y, z, 1, 1, 0.5, 'wart.png', 4, 1, 4, 300)}
+function addArtery(x, z) { addSprite(x, 0, z, 2, 8, 0.5, 'artery.png', 4, 1, 4, 300, true)}
 
 function addWallShape(x, y, z, width, height, points, textureNames, addBodies, transparent) {
     for (key in points) {
@@ -95,7 +96,7 @@ function moveBackward(moveSpeed) {
 function update() {
     var moveSpeed = 1;
     if (debug && keys.shift in keysDown)
-        moveSpeed = 4;
+        moveSpeed = 8;
 
     if (keys.left in keysDown)
         rotatePlayer(0.03);

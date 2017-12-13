@@ -97,6 +97,20 @@ var TH = {
         plane.position.y = y;
         TH.scene.add(plane);
     },
+    addAnimatedFloor : function (x, y, z, width, height, textureName, tilesX, tilesY, tilesTotal, duration) {
+        var tex = TH._loadTexture(textureName, 1, 1);
+        if (tilesTotal > 1) {
+            var animator = new TextureAnimator(tex, tilesX, tilesY, tilesTotal, duration);
+            TH.animators.push(animator);
+        }
+        var mat = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: tex, side: THREE.DoubleSide, transparent: true});
+        var geometry = new THREE.PlaneGeometry(width, height);
+        var plane = new THREE.Mesh(geometry, mat);
+        var floor = new THREE.Mesh( geometry, mat);
+        floor.position.set(x, y, z);
+        floor.rotation.x = -Math.PI / 2;
+        TH.scene.add(floor);
+    },
     addFloor : function (x, y, z, width, depth, image, transparent) {
         var repeatX = Math.floor(width / 100);
         var repeatY = Math.floor(depth / 100);
