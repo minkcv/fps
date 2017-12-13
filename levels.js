@@ -329,7 +329,7 @@ function loadLevel4() {
     addTentacle(1925, 10, 5090);
     addTentacle(1840, 10, 5060);
     addTentacle(1870, 10, 5150);
-    addTentacle(1825, 10, 5195);
+    addTentacle2(1825, 10, 5195);
 }
 
 function loadLevel5() {
@@ -359,4 +359,11 @@ function loadLevel5() {
     addTentacle2(1770, tentacleY, 5425);
     addOrgan(2070, 5470);
     addOrgan(2140, 5740);
+    addWart(1920, 0, 5400);
+    addWart(1880, floorY, 5480);
+    addWart(1890, -floorY, 5630);
+    addWart(2135, 0, 5490);
+    addWart(2035, 0, 5750);
+    addWart(1640, floorY, 5610);
+    addWart(1755, -floorY, 5370);
 }

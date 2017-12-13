@@ -39,6 +39,7 @@ function addTentacle(x, y, z) { addSprite(x, y, z, 1, 4, 0.5, 'tentacle.png', 4,
 function addTentacle2(x, y, z) { addSprite(x, y, z, 1, 4, 0.5, 'tentacle2.png', 4, 1, 4, 400, true)}
 function addHangingScrap(x, y, z) { addSprite(x, y, z, 1, 4, 0.5, 'scrap' + (Math.floor(Math.random() * 3) + 1) + 'hang.png')}
 function addOrgan(x, z) { addSprite(x, 0, z, 2, 4, 0.5, 'organ1.png', 4, 1, 4, 300, true)}
+function addWart(x, y, z) { addSprite(x, y, z, 1, 1, 0.5, 'wart.png', 4, 1, 4, 300)}
 
 function addWallShape(x, y, z, width, height, points, textureNames, addBodies, transparent) {
     for (key in points) {
