@@ -396,6 +396,12 @@ function loadLevel5() {
     TH.addFloorFromPoints(0, -floorY, 5000, floor3, 'flesh_ceiling.png');
     addEye(1120, 0, 5145);
     addEye(885, 0, 5198);
+    addWart(1220, 0, 5265);
+    addWart(1065, floorY, 5190);
+    addWart(800, 0, 5105);
+    addWart(610, floorY, 5190);
+    addWart(700, -floorY, 5380);
+    addTentacle2(565, 0, 5115);
     var walls4 = {"1023":{"x":749,"y":124,"next":-1,"previous":1038},"1024":{"x":761,"y":168,"next":1049,"previous":-1},"1038":{"x":715,"y":97,"next":1023,"previous":1039},"1039":{"x":669,"y":71,"next":1038,"previous":1040},"1040":{"x":615,"y":65,"next":1039,"previous":1041},"1041":{"x":556,"y":76,"next":1040,"previous":1042},"1042":{"x":509,"y":115,"next":1041,"previous":1043},"1043":{"x":499,"y":167,"next":1042,"previous":1044},"1044":{"x":514,"y":210,"next":1043,"previous":1045},"1045":{"x":546,"y":245,"next":1044,"previous":1046},"1046":{"x":595,"y":268,"next":1045,"previous":-1},"1047":{"x":645,"y":270,"next":-1,"previous":1048},"1048":{"x":700,"y":255,"next":1047,"previous":1049},"1049":{"x":739,"y":224,"next":1048,"previous":1024}};
     addWallShape(0, 0, 5000, shortWidth, shortHeight, walls4, shortWalls, true);
     var floor4 = {"1023":{"x":749,"y":124,"next":1024,"previous":1038},"1024":{"x":761,"y":168,"next":1049,"previous":1023},"1038":{"x":715,"y":97,"next":1023,"previous":1039},"1039":{"x":669,"y":71,"next":1038,"previous":1040},"1040":{"x":615,"y":65,"next":1039,"previous":1041},"1041":{"x":556,"y":76,"next":1040,"previous":1042},"1042":{"x":509,"y":115,"next":1041,"previous":1043},"1043":{"x":499,"y":167,"next":1042,"previous":1044},"1044":{"x":514,"y":210,"next":1043,"previous":1045},"1045":{"x":546,"y":245,"next":1044,"previous":1046},"1046":{"x":595,"y":268,"next":1045,"previous":1047},"1047":{"x":645,"y":270,"next":1046,"previous":1048},"1048":{"x":700,"y":255,"next":1047,"previous":1049},"1049":{"x":739,"y":224,"next":1048,"previous":1024}};
