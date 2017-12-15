@@ -395,12 +395,8 @@ function loadLevel5() {
     TH.addFloorFromPoints(0, floorY, 5000, floor4, 'flesh_floor.png');
     TH.addFloorFromPoints(0, -floorY, 5000, floor4, 'flesh_ceiling.png');
     addEye(507, 0, 5145);
-    addEye(507, 10, 5140);
-    addEye(507, -10, 5140);
-    addEye(507, 10, 5150);
-    addEye(507, -10, 5150);
-    addEye(507, 0, 5135);
-    addEye(507, 0, 5155);
+    addEye(690, 0, 5088);
+    addEye(745, 0, 5197);
     addOrgan(620, 5090);
     addOrgan(700, 5225);
     addOrgan(580, 5240);

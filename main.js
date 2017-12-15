@@ -41,7 +41,7 @@ function addHangingScrap(x, y, z) { addSprite(x, y, z, 1, 4, 0.5, 'scrap' + (Mat
 function addOrgan(x, z) { addSprite(x, 0, z, 2, 4, 0.5, 'organ1.png', 4, 1, 4, 300, true)}
 function addWart(x, y, z) { addSprite(x, y, z, 1, 1, 0.5, 'wart.png', 4, 1, 4, 300)}
 function addArtery(x, z) { addSprite(x, 0, z, 2, 8, 0.5, 'artery.png', 4, 1, 4, 300, true)}
-function addEye(x, y, z) { addSprite(x, y, z, 1, 1, 0.5, 'eye.png', 16, 1, 16, 700)}
+function addEye(x, y, z) { addSprite(x, y, z, 1, 1, 0.5, 'eye.png')}
 
 function addWallShape(x, y, z, width, height, points, textureNames, addBodies, transparent) {
     for (key in points) {
