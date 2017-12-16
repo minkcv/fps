@@ -18,7 +18,7 @@ var MA = {
             MA.render = Render.create({
                 element: document.getElementById('map'),
                 engine: MA.engine,
-                bounds: {min: {x:-400, y:-300}, max: {x:400, y:300}},
+                bounds: {min: {x:-300, y:-300}, max: {x:300, y:300}},
                 options: {
                     showAngleIndicator: true
                 }

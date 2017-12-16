@@ -7,14 +7,19 @@
     <script src='lib/three.min.js' type='text/javascript'></script>
     <style>
         body {
+            margin: 0px;
             font-family: monospace, sans-serif;
             color: #ffffff;
         }
-        body > div{
-            float: left;
+        #game, #map {
+            float:left;
         }
-        p {
-            margin: 0px;
+        #debug {
+            display: inline-block;
+        }
+        #debug > div{
+            padding-left: 20px;
+            float: left;
         }
         a {
             color: #ffffff;
@@ -22,22 +27,25 @@
     </style>
   </head>
 <body style='background-color: #202020'>
-    <div id='3d' style='width: 800px; height:600px;'></div>
-    <div id='map' style='width: 800px; height:600px;'></div>
+    <div id='top'>
+        <div id='game' style='width: 800px; height:600px;'></div>
+        <div id='map' style='width: 600px; height:600px;'></div>
+    </div>
     <div id='debug'>
-        <p>THREE</p>
+        <div>THREE
         <ul class='three'>
             <li id='x-pos'></li>
             <li id='z-pos'></li>
             <li id='angle'></li>
         </ul>
-        <br>
-        <p>MATTER</p>
+    </div>
+        <div>MATTER
         <ul class='matter'>
             <li id='x-pos'></li>
             <li id='y-pos'></li>
             <li id='angle'></li>
         </ul>
+    </div>
     </div>
     <div id='controls' style='visibility: hidden'>
         <h1>Neuropica</h1>
@@ -48,7 +56,7 @@
     var debug = !location.origin.includes('github.io');
     if (!debug) {
         document.body.style.textAlign = 'center';
-        var threed = document.getElementById('3d');
+        var threed = document.getElementById('game');
         threed.style.float = 'none';
         threed.style.marginLeft = 'auto';
         threed.style.marginRight = 'auto';

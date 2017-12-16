@@ -11,7 +11,7 @@ var TH = {
     animators : [],
 
     init : function () {
-        TH.threediv = document.getElementById('3d'),
+        TH.threediv = document.getElementById('game'),
         TH.width = TH.threediv.clientWidth;
         TH.height = TH.threediv.clientHeight;
         TH.scene = new THREE.Scene();
