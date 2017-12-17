@@ -1,3 +1,12 @@
+function changeControls(index) {
+    if (index == 0) {
+        keys = { up: 38, down: 40, right: 39, left: 37, a: 65, s: 83, d: 68, w: 87, shift: 16, r: 82, f: 70 };
+    }
+    else if (index == 1) {
+        keys = { up: 87, down: 83, right: 68, left: 65, a: 37, s: 40, d: 39, w: 38, shift: 16, r: 82, f: 70 };
+    }
+}
+
 function createPlayer(x, z, angle) {
     MA.createPlayer(x, z, angle);
     TH.camera.position.set(MA.player.position.x, 0, MA.player.position.y);

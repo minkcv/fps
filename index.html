@@ -49,7 +49,12 @@
     </div>
     <div id='controls' style='visibility: hidden'>
         <h1>Neuropica</h1>
-        <p>WASD and Arrow Keys<p>
+        <p>
+            <select onchange='changeControls(this.selectedIndex)'>
+                <option>WASD Moves, Arrows Look</option>
+                <option>Arrows Move, AD Looks</option>
+            </select>
+        </p>
         <a href='http://minkcv.com'>minkcv.com</a>
     </div>
     <script>
@@ -69,7 +74,7 @@
         document.getElementById('debug').style.display = 'none';
     }
     var keysDown = [];
-    var keys = { up: 38, down: 40, right: 39, left: 37, a: 65, s: 83, d: 68, w: 87, shift: 16, r: 82, f: 70 }
+    var keys = { up: 38, down: 40, right: 39, left: 37, a: 65, s: 83, d: 68, w: 87, shift: 16, r: 82, f: 70 };
     addEventListener("keydown", function(e) {
         keysDown[e.keyCode] = true;
     }, false);
