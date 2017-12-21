@@ -5,6 +5,7 @@ function changeControls(index) {
     else if (index == 1) {
         keys = { up: 87, down: 83, right: 68, left: 65, a: 37, s: 40, d: 39, w: 38, shift: 16, r: 82, f: 70 };
     }
+    document.getElementById('controls').blur();
 }
 
 function createPlayer(x, z, angle) {
