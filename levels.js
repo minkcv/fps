@@ -462,6 +462,12 @@ function loadLevel6() {
     var fleshEndWalls = ['flesh_end2.png', 'flesh_end3.png', 'flesh_end4.png',];
     addWallShape(0, 0, 5000, shortWidth, shortHeight, walls2, fleshEndWalls, true);
     var walls3 = {"1106":{"x":1760,"y":1046,"next":"1122","previous":-1},"1107":{"x":1734,"y":1090,"next":-1,"previous":"1145"},"1122":{"x":1821,"y":1066,"next":"1123","previous":"1106"},"1123":{"x":1878,"y":1101,"next":"1124","previous":"1122"},"1124":{"x":1917,"y":1148,"next":"1125","previous":"1123"},"1125":{"x":1942,"y":1213,"next":"1128","previous":"1124"},"1128":{"x":1942,"y":1279,"next":"1129","previous":"1125"},"1129":{"x":2011,"y":1279,"next":1146,"previous":"1128"},"1140":{"x":1784,"y":1278,"next":"1142","previous":1149},"1142":{"x":1862,"y":1278,"next":"1143","previous":"1140"},"1143":{"x":1862,"y":1217,"next":"1144","previous":"1142"},"1144":{"x":1835,"y":1164,"next":"1145","previous":"1143"},"1145":{"x":1790,"y":1121,"next":"1107","previous":"1144"},"1146":{"x":2011,"y":1358,"next":1147,"previous":"1129"},"1147":{"x":2011,"y":1441,"next":-1,"previous":1146},"1148":{"x":1784,"y":1443,"next":1149,"previous":-1},"1149":{"x":1784,"y":1363,"next":"1140","previous":1148}};
+    addPipe(1480, 5980);
+    addPipe(1690, 6090);
+    addPipe(1740, 6000);
+    addPipe(1520, 5890);
+    addPipe(1820, 6300);
+    addPipe(1980, 6300);
     addWallShape(0, 0, 5000, shortWidth, shortHeight, walls3, fleshEndWalls, true);
     var floor3 = {"1106":{"x":1760,"y":1046,"next":"1122","previous":"1107"},"1107":{"x":1734,"y":1090,"next":"1106","previous":"1145"},"1122":{"x":1821,"y":1066,"next":"1123","previous":"1106"},"1123":{"x":1878,"y":1101,"next":"1124","previous":"1122"},"1124":{"x":1917,"y":1148,"next":"1125","previous":"1123"},"1125":{"x":1942,"y":1213,"next":"1128","previous":"1124"},"1128":{"x":1942,"y":1279,"next":"1129","previous":"1125"},"1129":{"x":2011,"y":1279,"next":1146,"previous":"1128"},"1140":{"x":1784,"y":1278,"next":"1142","previous":1149},"1142":{"x":1862,"y":1278,"next":"1143","previous":"1140"},"1143":{"x":1862,"y":1217,"next":"1144","previous":"1142"},"1144":{"x":1835,"y":1164,"next":"1145","previous":"1143"},"1145":{"x":1790,"y":1121,"next":"1107","previous":"1144"},"1146":{"x":2011,"y":1358,"next":1147,"previous":"1129"},"1147":{"x":2011,"y":1441,"next":1148,"previous":1146},"1148":{"x":1784,"y":1443,"next":1149,"previous":1147},"1149":{"x":1784,"y":1363,"next":"1140","previous":1148}};
     TH.addFloorFromPoints(0, floorY, 5000, floor3, 'flesh_end_floor.png');
