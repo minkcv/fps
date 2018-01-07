@@ -468,5 +468,5 @@ function loadLevel6() {
     TH.addFloorFromPoints(0, -floorY, 5000, floor3, 'flesh_end_ceiling.png');
     var glass = {"1147":{"x":2011,"y":1441,"next":"1148","previous":-1},"1148":{"x":1784,"y":1443,"next":-1,"previous":"1147"}};
     addWallShape(0, 0, 5000, shortWidth, shortHeight, glass, ['glass.png'], true, true);
-    TH.addCylinder(1900, 0, 6300, 2500, 2800, 'space.png');
+    TH.addCylinder(1900, 0, 6300, 2500, 2900, 'space.png');
 }
