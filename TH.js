@@ -144,6 +144,18 @@ var TH = {
         floor.rotation.x = Math.PI / 2;
         TH.scene.add(floor);
     },
+    // A one off function for adding the space texture at the end
+    addCylinder : function(x, y, z, radius, height, textureName) {
+        var geom = new THREE.CylinderGeometry(radius, radius, height, 64, 1, true, 0, Math.PI);
+        var texture = TH._loadTexture(textureName, -1, 1); // -1 reverses the x direction of the texture
+        var mat = new THREE.MeshBasicMaterial({color: 0xffffff, flatShading: true, overdraw: 0.5, map: texture, side: THREE.BackSide, transparent: false});
+        var cylinder = new THREE.Mesh(geom, mat);
+        cylinder.rotation.y = -Math.PI / 2;
+        cylinder.position.x = x;
+        cylinder.position.y = y;
+        cylinder.position.z = z;
+        TH.scene.add(cylinder);
+    },
     update : function() {
         var delta = TH.clock.getDelta(); 
         for (var i in TH.animators) {
